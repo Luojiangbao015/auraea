@@ -1,0 +1,177 @@
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Hexo</title><meta name="author" content="John Doe"><meta name="copyright" content="John Doe"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="https://luojiangbao015.github.io/page/2/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://luojiangbao015.github.io/img/butterfly-icon.png">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://luojiangbao015.github.io/img/butterfly-icon.png"><link rel="shortcut icon" href="/auraea/img/favicon.png"><link rel="canonical" href="https://luojiangbao015.github.io/page/2/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/auraea/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/auraea/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: 'Copy Successful',
+    error: 'Copy Failed',
+    noSupport: 'Browser Not Supported'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: 'Just now',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: 'Load More'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Hexo',
+  isHighlightShrink: false,
+  isToc: false,
+  pageType: 'home'
+}</script><meta name="generator" content="Hexo 7.3.0"></head><body><div class="page" id="body-wrap"><header class="full_page" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/auraea/"><span class="site-name">Hexo</span></a></span><div id="menus"></div></nav><div id="site-info"><h1 id="site-title">Hexo</h1></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts nc" id="recent-posts"><div class="recent-post-items"><div class="recent-post-item"><div class="post_cover left"><a href="/auraea/2025/03/14/%E6%9D%82%E9%A1%B9/%E5%B0%8F%E8%AF%B4%20-%20%E5%89%AF%E6%9C%AC/" title="怪物猎人伤害"><img class="post-bg" src="/auraea/img/ww/D003.png" onerror="this.onerror=null;this.src='/auraea/img/404.jpg'" alt="怪物猎人伤害"></a></div><div class="recent-post-info"><a class="article-title" href="/auraea/2025/03/14/%E6%9D%82%E9%A1%B9/%E5%B0%8F%E8%AF%B4%20-%20%E5%89%AF%E6%9C%AC/" title="怪物猎人伤害">怪物猎人伤害</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2025-03-14T11:39:30.296Z" title="Created 2025-03-14 19:39:30">2025-03-14</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/auraea/categories/%E6%80%AA%E7%89%A9%E7%8C%8E%E4%BA%BA/">怪物猎人</a></span></div><div class="content">世界 世界等级：宇宙；1级星系；二级星系；星球；大陆(岛屿)；地域；国家；州；县；镇；村  宇宙：太初宇宙，昆仑宇宙，太清宇宙。  星系：  太初宇宙：天狼星系，太初星系，九玄星系 昆仑宇宙：天狗星系，天河星系 太清宇宙：天道星系  故事发展地址 清萍宗：昆仑宇宙-天河星系-九恒星系-北玄星-九幽大陆-南域-疆国-清州-清萍宗  疆国：清州，黔州，旧州，义州，匀州，理州，江州，仁州，  黔州：疆国最大的州，最大的宗门为药宗（帝级宗门，一名药帝）  清州：清萍宗（玄级），衍月宗（玄级），如烟门（玄级），拜月门（皇级），诡秘山（皇级）—  旧州：天岳阁（天级）   宗门等级 分为天，地，玄，黄，每级分三品，只有到道皇境才可开宗立派 帝级：一品：最少出过3位大帝；二品：做少二位大帝；三品：最少一位大帝 天级：一品：最少三道圣 地级：一品：做少三道尊 玄级：一品：最少三道宗 黄级：一品：最少三道皇  境界划分 每个境界分为五个阶段为初期-中期-后期-圆满-大圆满对于10-1段，每二段为阶  灵泉存储灵气-灵根转换灵气&#x3D;灵脉输送灵气  武者...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/auraea/2025/03/14/%E6%9D%82%E9%A1%B9/%E4%BC%A4%E5%AE%B3%E8%AE%A1%E7%AE%97/" title="怪物猎人伤害"><img class="post-bg" src="/auraea/img/ww/D003.png" onerror="this.onerror=null;this.src='/auraea/img/404.jpg'" alt="怪物猎人伤害"></a></div><div class="recent-post-info"><a class="article-title" href="/auraea/2025/03/14/%E6%9D%82%E9%A1%B9/%E4%BC%A4%E5%AE%B3%E8%AE%A1%E7%AE%97/" title="怪物猎人伤害">怪物猎人伤害</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2025-03-14T11:39:30.295Z" title="Created 2025-03-14 19:39:30">2025-03-14</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/auraea/categories/%E6%80%AA%E7%89%A9%E7%8C%8E%E4%BA%BA/">怪物猎人</a></span></div><div class="content">w 背包  守护符:6 力量爪:9   药品  鬼人药大 7 鬼人粉尘 10 怪力种子 10 怪力药丸 25  默认满配 42  大剑201 怪力药丸57   大剑273 伤害计算公式面板 &#x2F; 武器倍率 * 武器动作 &#x2F; 100  会心伤害 * 斩味 *肉质 异常 * 愤怒 * 刃 &#x2F;100 物理伤害&#x3D;**面板 &#x2F; 武器倍率 * 武器动作 &#x2F; 100 * 会心伤害 * 斩味 异常 * 愤怒 * 刃中补正 惩罚 * 肉质 &#x2F;100 ** 属性伤害&#x3D;**属性值 &#x2F;10 斩味补正(1.2) 属性补正(1) * 愤怒补正 * 属性会心补正(1.5) * 异常补正 * 属性吸收...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/auraea/2025/03/14/%E6%9D%82%E9%A1%B9/html/" title="怪物猎人伤害"><img class="post-bg" src="/auraea/img/ww/D003.png" onerror="this.onerror=null;this.src='/auraea/img/404.jpg'" alt="怪物猎人伤害"></a></div><div class="recent-post-info"><a class="article-title" href="/auraea/2025/03/14/%E6%9D%82%E9%A1%B9/html/" title="怪物猎人伤害">怪物猎人伤害</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2025-03-14T11:39:30.293Z" title="Created 2025-03-14 19:39:30">2025-03-14</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/auraea/categories/%E6%80%AA%E7%89%A9%E7%8C%8E%E4%BA%BA/">怪物猎人</a></span></div><div class="content">...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/auraea/2025/03/14/%E6%88%88%E5%A4%9A/%E9%80%9A%E7%94%A8/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%8B%B1%E8%AF%AD/" title="计算机英语"><img class="post-bg" src="/auraea/img/ww/A.png" onerror="this.onerror=null;this.src='/auraea/img/404.jpg'" alt="计算机英语"></a></div><div class="recent-post-info"><a class="article-title" href="/auraea/2025/03/14/%E6%88%88%E5%A4%9A/%E9%80%9A%E7%94%A8/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%8B%B1%E8%AF%AD/" title="计算机英语">计算机英语</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2025-03-14T11:39:30.289Z" title="Created 2025-03-14 19:39:30">2025-03-14</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/auraea/categories/godot/">godot</a></span></div><div class="content">...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/auraea/2025/03/14/%E6%88%88%E5%A4%9A/%E7%9D%80%E8%89%B2%E5%99%A8/godot%E7%9D%80%E8%89%B2%E5%99%A8/" title="godot着色器"><img class="post-bg" src="/auraea/img/ww/D003.png" onerror="this.onerror=null;this.src='/auraea/img/404.jpg'" alt="godot着色器"></a></div><div class="recent-post-info"><a class="article-title" href="/auraea/2025/03/14/%E6%88%88%E5%A4%9A/%E7%9D%80%E8%89%B2%E5%99%A8/godot%E7%9D%80%E8%89%B2%E5%99%A8/" title="godot着色器">godot着色器</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2025-03-14T11:39:30.286Z" title="Created 2025-03-14 19:39:30">2025-03-14</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/auraea/categories/godot/">godot</a></span></div><div class="content">三渲二基础 自己改的  12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061shader_type spatial;render_mode ambient_light_disabled;uniform sampler2D base:source_color;uniform sampler2D sss:source_color;uniform sampler2D ilm:source_color;uniform float shinese= 32.0f; //高光范围uniform float shade_threshold:hint_range(0,1)=0.3;uniform float spec_threshold:hint_range(0,0.1)=0.05f;uniform float test:hint_range(0,1)=0.5f; //亮度varying vec4 v_color;void...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/auraea/2025/03/14/%E6%88%88%E5%A4%9A/GDScript/godot%E5%9F%BA%E7%A1%80/" title="godot基础"><img class="post-bg" src="/auraea/img/ww/D003.png" onerror="this.onerror=null;this.src='/auraea/img/404.jpg'" alt="godot基础"></a></div><div class="recent-post-info"><a class="article-title" href="/auraea/2025/03/14/%E6%88%88%E5%A4%9A/GDScript/godot%E5%9F%BA%E7%A1%80/" title="godot基础">godot基础</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2025-03-14T11:39:30.282Z" title="Created 2025-03-14 19:39:30">2025-03-14</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/auraea/categories/godot/">godot</a></span></div><div class="content">语法变量12345var 变量:int #自动转换类型var 整型:int #限定为整型var 字符串:String #限定为字符串var 浮点:float #限定为字符串var 数组:array  类123class 类:    var x    var y  函数12func 方法()-&gt;void:    print(&quot;输出&quot;)  12345#判断类型转换掉用if (@event is InputEventMouseMotion mouseMotion)&#123;	_mouseDelta = mouseMotion.Relative;&#125;  封装123456789var _width: float = 0.0@export var 宽度: float=27:	get(): 		return _width	set(value):		if value==_width:			return		_width=value		_回调_尺寸改变时()    存储系统 代码实例:读取 123456789extends Nodeclass_name...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/auraea/2025/03/14/%E6%88%88%E5%A4%9A/GDScript/Gdextension/" title="Gdextension"><img class="post-bg" src="/auraea/img/ww/D003.png" onerror="this.onerror=null;this.src='/auraea/img/404.jpg'" alt="Gdextension"></a></div><div class="recent-post-info"><a class="article-title" href="/auraea/2025/03/14/%E6%88%88%E5%A4%9A/GDScript/Gdextension/" title="Gdextension">Gdextension</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2025-03-14T11:39:30.280Z" title="Created 2025-03-14 19:39:30">2025-03-14</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/auraea/categories/godot/">godot</a></span></div><div class="content">源码模板123456789101112131415161718192021222324#ifndef THREEN_H#define THREEN_H#include &lt;godot_cpp/classes/node.hpp&gt;//#include &lt;godot_cpp/core/class_db.hpp&gt;#include &lt;godot_cpp/variant/utility_functions.hpp&gt;  //输出字符串用using namespace godot;//#define VARIANT_ARG_MAX 8//#define VARIANT_ARG_DECLARE const Variant &amp;p_arg1, const Variant &amp;p_arg2, const Variant &amp;p_arg3, const Variant &amp;p_arg4, const //Variant &amp;p_arg5, const Variant &amp;p_arg6, const Variant...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/auraea/2025/03/14/%E6%88%88%E5%A4%9A/CSharp/CS%E6%88%88%E5%A4%9A%E6%9D%82%E9%A1%B9/" title="C#杂项"><img class="post-bg" src="/auraea/img/ww/A.png" onerror="this.onerror=null;this.src='/auraea/img/404.jpg'" alt="C#杂项"></a></div><div class="recent-post-info"><a class="article-title" href="/auraea/2025/03/14/%E6%88%88%E5%A4%9A/CSharp/CS%E6%88%88%E5%A4%9A%E6%9D%82%E9%A1%B9/" title="C#杂项">C#杂项</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2025-03-14T11:39:30.276Z" title="Created 2025-03-14 19:39:30">2025-03-14</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/auraea/categories/godot/">godot</a></span></div><div class="content">戈多CS源码类声明1public class Node : GodotObject  枚举声明12345678public enum ProcessModeEnum : long   &#123;       Inherit,       Pausable,       WhenPaused,       Always,       Disabled   &#125;  FLAGS声明 可以组合多种状态 示例  1234567891011121314151617181920//声明    [Flags]    public fliagsenum MySlags&#123;A=1,B=2,C=4&#125;;//函数    public void func(fliags a)    &#123;        if((fliags &amp; MySlags.A)== MySlags.A)        &#123;            //第一个方法        &#125;        if((fliags &amp; MySlags.A)== MySlags.A)  ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/auraea/2025/03/14/%E6%88%88%E5%A4%9A/CSharp/cs%E6%88%88%E5%A4%9AAPI/" title="CSAPI"><img class="post-bg" src="/auraea/img/ww/D003.png" onerror="this.onerror=null;this.src='/auraea/img/404.jpg'" alt="CSAPI"></a></div><div class="recent-post-info"><a class="article-title" href="/auraea/2025/03/14/%E6%88%88%E5%A4%9A/CSharp/cs%E6%88%88%E5%A4%9AAPI/" title="CSAPI">CSAPI</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2025-03-14T11:39:30.275Z" title="Created 2025-03-14 19:39:30">2025-03-14</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/auraea/categories/godot/">godot</a></span></div><div class="content">数据结构线程概念 并发 分配时间 并行 多核运行 计算量密集 同步 需要等待 异步 不需要等待 网络操作     英文名 中文名 描述    Queue 队列    Stack 栈    Dictionary&lt;TKey,...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/auraea/2025/03/14/%E6%88%88%E5%A4%9A/CSharp/CS%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE%E4%BB%A3%E7%A0%81/" title="CS基础配置代码"><img class="post-bg" src="https://img2.imgtp.com/2024/03/29/G1firM5D.webp" onerror="this.onerror=null;this.src='/auraea/img/404.jpg'" alt="CS基础配置代码"></a></div><div class="recent-post-info"><a class="article-title" href="/auraea/2025/03/14/%E6%88%88%E5%A4%9A/CSharp/CS%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE%E4%BB%A3%E7%A0%81/" title="CS基础配置代码">CS基础配置代码</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2025-03-14T11:39:30.273Z" title="Created 2025-03-14 19:39:30">2025-03-14</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/auraea/categories/godot/">godot</a></span></div><div class="content">脚本配置按键123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384public class GAME_KEY&#123;    //方向键    public const string lift = &quot;ui_left&quot;;    public const string right = &quot;ui_left&quot;;    public const string up = &quot;ui_left&quot;;    public const string down = &quot;ui_left&quot;;    //鼠标(未配置)    public readonly static string Moue_lift = &quot;ui_lift&quot;;    public...</div></div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/auraea/"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/auraea/">1</a><span class="page-number current">2</span><a class="page-number" href="/auraea/page/3/#content-inner">3</a><a class="page-number" href="/auraea/page/4/#content-inner">4</a><a class="extend next" rel="next" href="/auraea/page/3/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/auraea/img/butterfly-icon.png" onerror="this.onerror=null;this.src='/auraea/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">John Doe</div><div class="author-info-description"></div><div class="site-data"><a href="/auraea/archives/"><div class="headline">Articles</div><div class="length-num">36</div></a><a href="/auraea/tags/"><div class="headline">Tags</div><div class="length-num">3</div></a><a href="/auraea/categories/"><div class="headline">Categories</div><div class="length-num">6</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Posts</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/auraea/2025/03/14/%E6%B8%B8%E6%88%8F%E8%AE%BE%E8%AE%A1/%E6%B8%B8%E6%88%8F%E8%AE%BE%E8%AE%A1/" title="游戏设计"><img src="/auraea/img/ww/D003.png" onerror="this.onerror=null;this.src='/auraea/img/404.jpg'" alt="游戏设计"/></a><div class="content"><a class="title" href="/auraea/2025/03/14/%E6%B8%B8%E6%88%8F%E8%AE%BE%E8%AE%A1/%E6%B8%B8%E6%88%8F%E8%AE%BE%E8%AE%A1/" title="游戏设计">游戏设计</a><time datetime="2025-03-14T11:39:30.302Z" title="Created 2025-03-14 19:39:30">2025-03-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/auraea/2025/03/14/%E6%9D%82%E9%A1%B9/%E6%B8%B8%E6%88%8F%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90/" title="游戏源码解析"><img src="/auraea/img/ww/D003.png" onerror="this.onerror=null;this.src='/auraea/img/404.jpg'" alt="游戏源码解析"/></a><div class="content"><a class="title" href="/auraea/2025/03/14/%E6%9D%82%E9%A1%B9/%E6%B8%B8%E6%88%8F%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90/" title="游戏源码解析">游戏源码解析</a><time datetime="2025-03-14T11:39:30.299Z" title="Created 2025-03-14 19:39:30">2025-03-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/auraea/2025/03/14/%E6%9D%82%E9%A1%B9/%E5%B0%8F%E8%AF%B4/" title="怪物猎人伤害"><img src="/auraea/img/ww/D003.png" onerror="this.onerror=null;this.src='/auraea/img/404.jpg'" alt="怪物猎人伤害"/></a><div class="content"><a class="title" href="/auraea/2025/03/14/%E6%9D%82%E9%A1%B9/%E5%B0%8F%E8%AF%B4/" title="怪物猎人伤害">怪物猎人伤害</a><time datetime="2025-03-14T11:39:30.298Z" title="Created 2025-03-14 19:39:30">2025-03-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/auraea/2025/03/14/%E6%9D%82%E9%A1%B9/%E5%B0%8F%E8%AF%B4%20-%20%E5%89%AF%E6%9C%AC/" title="怪物猎人伤害"><img src="/auraea/img/ww/D003.png" onerror="this.onerror=null;this.src='/auraea/img/404.jpg'" alt="怪物猎人伤害"/></a><div class="content"><a class="title" href="/auraea/2025/03/14/%E6%9D%82%E9%A1%B9/%E5%B0%8F%E8%AF%B4%20-%20%E5%89%AF%E6%9C%AC/" title="怪物猎人伤害">怪物猎人伤害</a><time datetime="2025-03-14T11:39:30.296Z" title="Created 2025-03-14 19:39:30">2025-03-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/auraea/2025/03/14/%E6%9D%82%E9%A1%B9/%E4%BC%A4%E5%AE%B3%E8%AE%A1%E7%AE%97/" title="怪物猎人伤害"><img src="/auraea/img/ww/D003.png" onerror="this.onerror=null;this.src='/auraea/img/404.jpg'" alt="怪物猎人伤害"/></a><div class="content"><a class="title" href="/auraea/2025/03/14/%E6%9D%82%E9%A1%B9/%E4%BC%A4%E5%AE%B3%E8%AE%A1%E7%AE%97/" title="怪物猎人伤害">怪物猎人伤害</a><time datetime="2025-03-14T11:39:30.295Z" title="Created 2025-03-14 19:39:30">2025-03-14</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>Categories</span>
+            
+          </div>
+          <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/auraea/categories/Unity/"><span class="card-category-list-name">Unity</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/auraea/categories/c/"><span class="card-category-list-name">c#</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/auraea/categories/cpp/"><span class="card-category-list-name">cpp</span><span class="card-category-list-count">9</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/auraea/categories/godot/"><span class="card-category-list-name">godot</span><span class="card-category-list-count">11</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/auraea/categories/ue5/"><span class="card-category-list-name">ue5</span><span class="card-category-list-count">9</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/auraea/categories/%E6%80%AA%E7%89%A9%E7%8C%8E%E4%BA%BA/"><span class="card-category-list-name">怪物猎人</span><span class="card-category-list-count">4</span></a></li>
+          </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>Tags</span></div><div class="card-tag-cloud"><a href="/auraea/tags/%E5%AD%A6%E4%B9%A0/" style="font-size: 1.5em; color: #99a9bf">学习</a> <a href="/auraea/tags/%E8%84%9A%E6%9C%AC/" style="font-size: 1.1em; color: #999">脚本</a> <a href="/auraea/tags/%E5%8F%98%E9%87%8F/" style="font-size: 1.3em; color: #99a1ac">变量</a></div></div><div class="card-widget card-archives">
+    <div class="item-headline">
+      <i class="fas fa-archive"></i>
+      <span>Archives</span>
+      
+    </div>
+  
+    <ul class="card-archive-list">
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/auraea/archives/2025/03/">
+            <span class="card-archive-list-date">
+              March 2025
+            </span>
+            <span class="card-archive-list-count">30</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/auraea/archives/2024/03/">
+            <span class="card-archive-list-date">
+              March 2024
+            </span>
+            <span class="card-archive-list-count">6</span>
+          </a>
+        </li>
+      
+    </ul>
+  </div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>Website Info</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">Article Count :</div><div class="item-count">36</div></div><div class="webinfo-item"><div class="item-name">Unique Visitors :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">Page Views :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">Last Update :</div><div class="item-count" id="last-push-date" data-lastPushDate="2025-03-14T11:40:06.277Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2025 By John Doe</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 7.3.0</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.3.5</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="Toggle Between Light and Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle Between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Settings"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="Back to Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/auraea/js/utils.js"></script><script src="/auraea/js/main.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

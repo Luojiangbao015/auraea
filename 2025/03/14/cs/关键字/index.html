@@ -1,0 +1,500 @@
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>c#关键字 | Hexo</title><meta name="author" content="John Doe"><meta name="copyright" content="John Doe"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="文档说明 记录C#的一些基础学习  C#常用关键字关键字集合123456class new public private protectedstatic静态 internal程序集 readonly只读 virtual虚函数 override重写 interface接口 abstract抽象 delegate委托sealed密封 base基类 this自己for break continuewit">
+<meta property="og:type" content="article">
+<meta property="og:title" content="c#关键字">
+<meta property="og:url" content="https://luojiangbao015.github.io/2025/03/14/cs/%E5%85%B3%E9%94%AE%E5%AD%97/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="文档说明 记录C#的一些基础学习  C#常用关键字关键字集合123456class new public private protectedstatic静态 internal程序集 readonly只读 virtual虚函数 override重写 interface接口 abstract抽象 delegate委托sealed密封 base基类 this自己for break continuewit">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://luojiangbao015.github.io/img/butterfly-icon.png">
+<meta property="article:published_time" content="2025-03-14T11:39:30.164Z">
+<meta property="article:modified_time" content="2024-09-10T13:06:11.220Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="学习">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://luojiangbao015.github.io/img/butterfly-icon.png"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "c#关键字",
+  "url": "https://luojiangbao015.github.io/2025/03/14/cs/%E5%85%B3%E9%94%AE%E5%AD%97/",
+  "image": "https://luojiangbao015.github.io/img/butterfly-icon.png",
+  "datePublished": "2025-03-14T11:39:30.164Z",
+  "dateModified": "2024-09-10T13:06:11.220Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "John Doe",
+      "url": "https://luojiangbao015.github.io/"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/auraea/img/favicon.png"><link rel="canonical" href="https://luojiangbao015.github.io/2025/03/14/cs/%E5%85%B3%E9%94%AE%E5%AD%97/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/auraea/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/auraea/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: 'Copy Successful',
+    error: 'Copy Failed',
+    noSupport: 'Browser Not Supported'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: 'Just now',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: 'Load More'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'c#关键字',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><meta name="generator" content="Hexo 7.3.0"></head><body><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/auraea/"><span class="site-name">Hexo</span></a><a class="nav-page-title" href="/auraea/"><span class="site-name">c#关键字</span></a></span><div id="menus"></div></nav><div id="post-info"><h1 class="post-title">c#关键字</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2025-03-14T11:39:30.164Z" title="Created 2025-03-14 19:39:30">2025-03-14</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2024-09-10T13:06:11.220Z" title="Updated 2024-09-10 21:06:11">2024-09-10</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/auraea/categories/c/">c#</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post Views:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><h1 id="文档说明"><a href="#文档说明" class="headerlink" title="文档说明"></a>文档说明</h1><ul>
+<li>记录C#的一些基础学习</li>
+</ul>
+<h1 id="C-常用关键字"><a href="#C-常用关键字" class="headerlink" title="C#常用关键字"></a>C#常用关键字</h1><h3 id="关键字集合"><a href="#关键字集合" class="headerlink" title="关键字集合"></a>关键字集合</h3><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title">new</span> <span class="title">public</span> <span class="title">private</span> <span class="title">protected</span></span><br><span class="line"><span class="title">static</span>静态 <span class="title">internal</span>程序集 <span class="title">readonly</span>只读 </span><br><span class="line"><span class="title">virtual</span>虚函数 <span class="title">override</span>重写 <span class="title">interface</span>接口 <span class="title">abstract</span>抽象 <span class="title">delegate</span>委托</span><br><span class="line"><span class="title">sealed</span>密封 <span class="title">base</span>基类 <span class="title">this</span>自己</span><br><span class="line"><span class="title">for</span> <span class="title">break</span> <span class="title">continue</span></span><br><span class="line"><span class="title">with</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h2><ul>
+<li>int 整数</li>
+<li>float  浮点</li>
+<li>double 双精度浮点</li>
+<li>char 字符型</li>
+<li>string 字符串</li>
+<li>bool 布尔</li>
+<li>void 方法</li>
+</ul>
+<h2 id="new-实例化"><a href="#new-实例化" class="headerlink" title="new 实例化"></a>new 实例化</h2><figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"><span class="keyword">namespace</span> 命名空间</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">class</span> 游戏类</span><br><span class="line">    &#123;</span><br><span class="line">       <span class="keyword">public</span> <span class="built_in">string</span> 名字 &#123;  <span class="keyword">get</span>; <span class="keyword">set</span>; &#125; <span class="comment">//声明字符串类型</span></span><br><span class="line">       <span class="keyword">public</span> <span class="built_in">int</span> 年龄 &#123; <span class="keyword">get</span>; <span class="keyword">set</span> ; &#125; <span class="comment">//声明整数</span></span><br><span class="line">        <span class="comment">//构造函数</span></span><br><span class="line">        <span class="keyword">public</span> 游戏类()</span><br><span class="line">        &#123;</span><br><span class="line">            名字 = <span class="string">&quot;无&quot;</span>;</span><br><span class="line">            年龄 = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//构造函数 带参数</span></span><br><span class="line">        <span class="keyword">public</span> 游戏类(<span class="built_in">string</span> 名字, <span class="built_in">int</span> 年龄)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">this</span>.名字 = 名字;</span><br><span class="line">            <span class="keyword">this</span>.年龄 = 年龄;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">void</span> 输出信息()</span><br><span class="line">        &#123;</span><br><span class="line">            Console.WriteLine(<span class="string">&quot;名字:&quot;</span>+名字); Console.WriteLine(<span class="string">&quot;年龄:&quot;</span>+年龄);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">class</span> 主程序</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">//主程序</span></span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>()</span></span><br><span class="line">        &#123;</span><br><span class="line">            游戏类 怪物=<span class="keyword">new</span> 游戏类();  <span class="comment">//实例化对象</span></span><br><span class="line">            游戏类 玩家=<span class="keyword">new</span> 游戏类(<span class="string">&quot;李七夜&quot;</span>,<span class="number">17</span>);  <span class="comment">//实例化对象 带参数</span></span><br><span class="line">            玩家.输出信息();</span><br><span class="line">            怪物.输出信息();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="class-类"><a href="#class-类" class="headerlink" title="class 类"></a>class 类</h2><figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title">Myclass</span>&#123;</span><br><span class="line">    <span class="comment">//类成员</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="public-公开"><a href="#public-公开" class="headerlink" title="public  公开"></a>public  公开</h2><ul>
+<li>public是一个访问修饰符,带有public修饰的类,方法,属性可以在任何地方访问</li>
+</ul>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"><span class="keyword">namespace</span> 命名空间</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">class</span> 游戏类</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">//声明公开属性</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">public</span> <span class="built_in">int</span> 年龄 &#123; <span class="keyword">get</span>; <span class="keyword">set</span>; &#125;</span><br><span class="line">        <span class="comment">//构造函数</span></span><br><span class="line">        <span class="keyword">public</span> 游戏类(<span class="built_in">int</span> 年龄)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">this</span>.年龄 = 年龄;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//声明公开函数</span></span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">void</span> 输出信息()</span><br><span class="line">        &#123;</span><br><span class="line">            Console.WriteLine(年龄);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">class</span> 主程序</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">//主程序</span></span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>()</span></span><br><span class="line">        &#123;</span><br><span class="line">            游戏类 玩家=<span class="keyword">new</span> 游戏类(<span class="number">17</span>);  <span class="comment">//实例化</span></span><br><span class="line">            Console.WriteLine(玩家.年龄);   <span class="comment">//可在类外调用属性并输出</span></span><br><span class="line">            玩家.输出信息();                <span class="comment">//可在类外调用函数</span></span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="private-私有"><a href="#private-私有" class="headerlink" title="private 私有"></a>private 私有</h2><ul>
+<li>private是访问修饰符,带private 修饰的类,方法,属性只可以在自身类里访问</li>
+</ul>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"><span class="keyword">namespace</span> 命名空间</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">class</span> 游戏类</span><br><span class="line">    &#123;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        <span class="keyword">public</span> <span class="built_in">int</span> 年龄 &#123; <span class="keyword">get</span>; <span class="keyword">set</span>; &#125;  <span class="comment">//声明公开属性</span></span><br><span class="line">        <span class="keyword">private</span> <span class="built_in">int</span> 攻击力 &#123; <span class="keyword">get</span>; <span class="keyword">set</span>; &#125;  <span class="comment">//声明私有属性</span></span><br><span class="line">        <span class="keyword">private</span> <span class="keyword">void</span> 攻击方法() &#123; Console.WriteLine(攻击力); &#125;  <span class="comment">//声明私有方法</span></span><br><span class="line">        <span class="comment">//构造函数</span></span><br><span class="line">        <span class="keyword">public</span> 游戏类(<span class="built_in">int</span> 年龄)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">this</span>.年龄 = 年龄;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//声明公开函数</span></span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">void</span> 输出信息()</span><br><span class="line">        &#123;</span><br><span class="line">            Console.WriteLine(年龄);  <span class="comment">//类内输出公开的属性</span></span><br><span class="line">            Console.WriteLine(攻击力);  <span class="comment">//类内输出私有的属性</span></span><br><span class="line">            攻击方法();                 <span class="comment">//类内调用私有方法</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">class</span> 主程序</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">//主程序</span></span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>()</span></span><br><span class="line">        &#123;</span><br><span class="line">            游戏类 玩家=<span class="keyword">new</span> 游戏类(<span class="number">17</span>);  <span class="comment">//实例化</span></span><br><span class="line">            Console.WriteLine(玩家.年龄);   <span class="comment">//可在类外调用属性并输出</span></span><br><span class="line">            玩家.输出信息();                <span class="comment">//可在类外调用函数</span></span><br><span class="line"></span><br><span class="line">            <span class="comment">//在这里不能获取声明为私有类型的属性</span></span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="protected-受保护"><a href="#protected-受保护" class="headerlink" title="protected 受保护"></a>protected 受保护</h2><ul>
+<li>protected 是访问修饰符,带protected 修饰的类,方法,属性只可以在子类里访问</li>
+</ul>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"><span class="keyword">namespace</span> 命名空间</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">class</span> 游戏类</span><br><span class="line">    &#123;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        <span class="keyword">public</span> <span class="built_in">int</span> 年龄 &#123; <span class="keyword">get</span>; <span class="keyword">set</span>; &#125;  <span class="comment">//声明公开属性</span></span><br><span class="line">        <span class="keyword">private</span> <span class="built_in">int</span> 攻击力 &#123; <span class="keyword">get</span>; <span class="keyword">set</span>; &#125;  <span class="comment">//声明私有属性</span></span><br><span class="line">        <span class="keyword">protected</span> <span class="built_in">int</span> 生命值 &#123; <span class="keyword">get</span>; <span class="keyword">set</span>; &#125;  <span class="comment">//声明受保护属性</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        <span class="keyword">private</span> <span class="keyword">void</span> 输出攻击() &#123; Console.WriteLine(攻击力); &#125;  <span class="comment">//声明私有方法</span></span><br><span class="line">        <span class="keyword">protected</span> <span class="keyword">void</span> 输出生命值() &#123; Console.WriteLine(生命值); &#125;  <span class="comment">//声明受保护的方法</span></span><br><span class="line">        <span class="comment">//构造函数</span></span><br><span class="line">        <span class="comment">//public 游戏类() &#123; &#125;</span></span><br><span class="line">        <span class="keyword">public</span> 游戏类(<span class="built_in">int</span> 年龄)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">this</span>.年龄 = 年龄;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//声明公开函数</span></span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">void</span> 输出信息()</span><br><span class="line">        &#123;</span><br><span class="line">            Console.WriteLine(年龄);  <span class="comment">//类内输出公开的属性</span></span><br><span class="line">            Console.WriteLine(攻击力);  <span class="comment">//类内输出私有的属性</span></span><br><span class="line">            输出攻击();                 <span class="comment">//类内调用私有方法</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">class</span> 子游戏类 : 游戏类</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">public</span> 子游戏类(<span class="built_in">int</span> key) :<span class="keyword">base</span>(key) &#123; 年龄 = key; &#125;  <span class="comment">//构造函数</span></span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">void</span> 子输出生命值() &#123; Console.WriteLine(生命值); 输出生命值(); &#125;  <span class="comment">//可以获取受保护的属性和受保护的函数</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">class</span> 主程序</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">//主程序</span></span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>()</span></span><br><span class="line">        &#123;</span><br><span class="line">            游戏类 玩家=<span class="keyword">new</span> 游戏类(<span class="number">17</span>);  <span class="comment">//实例化</span></span><br><span class="line">            Console.WriteLine(玩家.年龄);   <span class="comment">//可在类外调用属性并输出</span></span><br><span class="line">            玩家.输出信息();                <span class="comment">//可在类外调用函数</span></span><br><span class="line"></span><br><span class="line">            <span class="comment">//在这里不能获取声明为私有类型的属性</span></span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="static-静态"><a href="#static-静态" class="headerlink" title="static 静态"></a>static 静态</h2><ul>
+<li>static 关键字，用于定义<strong>静态成员</strong>。静态成员属于类，而不属于类的实例，可以通过类名来访问</li>
+</ul>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"><span class="keyword">namespace</span> 命名空间</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">class</span> 游戏类</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">static</span> <span class="built_in">int</span> 静态属性 = <span class="number">0</span>;  <span class="comment">//声明静态属性</span></span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> 静态方法() &#123; Console.WriteLine(<span class="string">&quot;你好世界&quot;</span>); &#125;   <span class="comment">//声明静态方法</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">class</span> 主程序</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">//主程序</span></span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>()</span></span><br><span class="line">        &#123;</span><br><span class="line">            Console.WriteLine(游戏类.静态属性);  <span class="comment">//通过类名直接调用属性</span></span><br><span class="line">            游戏类.静态方法();  <span class="comment">//通过类名直接调用方法</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="internal-程序集"><a href="#internal-程序集" class="headerlink" title="internal 程序集"></a>internal 程序集</h2><ul>
+<li>internal 是一个访问修饰符，用于指定类成员的访问级别。当将类成员声明为 internal 时，表示该成员只能在当前程序集中访问，其他程序集无法访问。</li>
+</ul>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">internal</span> <span class="keyword">class</span> 玩家类</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">internal</span> <span class="built_in">int</span> 整数;</span><br><span class="line">    <span class="keyword">internal</span> <span class="keyword">void</span> 方法()</span><br><span class="line">    &#123;</span><br><span class="line">        Console.WriteLine(<span class="string">&quot;Hello World!&quot;</span>);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="readonly-只读"><a href="#readonly-只读" class="headerlink" title="readonly 只读"></a>readonly 只读</h2><ul>
+<li>readonly 是一个修饰符，用于标识只读的成员变量。当将类成员变量声明为 readonly 时，表示该变量的值只能在声明或构造函数中进行赋值，一旦赋值后就不能再被修改。</li>
+</ul>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">MyClass</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">readonly</span> <span class="built_in">int</span> myInt;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">MyClass</span>(<span class="params"><span class="built_in">int</span> <span class="keyword">value</span></span>)</span></span><br><span class="line">    &#123;</span><br><span class="line">        myInt = <span class="keyword">value</span>;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="virtual-重写"><a href="#virtual-重写" class="headerlink" title="virtual 重写"></a>virtual 重写</h2><ul>
+<li>virtual 是一个修饰符，用于标识可以被子类重写的方法、属性或索引器。当将方法、属性或索引器声明为 virtual 时，表示该成员可以被子类重写。</li>
+</ul>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">MyBaseClass</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">virtual</span> <span class="keyword">void</span> <span class="title">MyMethod</span>()</span></span><br><span class="line">    &#123;</span><br><span class="line">        Console.WriteLine(<span class="string">&quot;MyBaseClass.MyMethod&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">MyDerivedClass</span> : <span class="title">MyBaseClass</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">override</span> <span class="keyword">void</span> <span class="title">MyMethod</span>()</span></span><br><span class="line">    &#123;</span><br><span class="line">        Console.WriteLine(<span class="string">&quot;MyDerivedClass.MyMethod&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="override-重写"><a href="#override-重写" class="headerlink" title="override 重写"></a>override 重写</h2><ul>
+<li>override 是一个修饰符，用于标识子类中重写父类方法、属性或索引器的成员。当将子类中的方法、属性或索引器声明为 override 时，表示该成员将会覆盖父类的同名成员。</li>
+</ul>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">MyBaseClass</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">virtual</span> <span class="keyword">void</span> <span class="title">MyMethod</span>()</span></span><br><span class="line">    &#123;</span><br><span class="line">        Console.WriteLine(<span class="string">&quot;MyBaseClass.MyMethod&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">MyDerivedClass</span> : <span class="title">MyBaseClass</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">override</span> <span class="keyword">void</span> <span class="title">MyMethod</span>()</span></span><br><span class="line">    &#123;</span><br><span class="line">        Console.WriteLine(<span class="string">&quot;MyDerivedClass.MyMethod&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="abstract-抽象"><a href="#abstract-抽象" class="headerlink" title="abstract 抽象"></a>abstract 抽象</h2><ul>
+<li>abstract 是一个修饰符，用于标识抽象类、抽象方法或抽象属性。抽象类是一种不能被实例化的类，它只能作为其他类的基类，并且它至少包含一个抽象方法。抽象方法是一种没有实现体的方法，它必须在子类中被实现。抽象属性是一种没有具体实现的属性，它必须在子类中被实现。</li>
+</ul>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"><span class="keyword">namespace</span> 命名空间</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">abstract</span> <span class="keyword">class</span> <span class="title">MyBaseClass</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">abstract</span> <span class="keyword">void</span> 方法();</span><br><span class="line"></span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">abstract</span> <span class="built_in">int</span> 属性 &#123; <span class="keyword">get</span>; <span class="keyword">set</span>; &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">class</span> 游戏类 : <span class="title">MyBaseClass</span>      <span class="comment">//继承</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keyword">void</span> 方法()       <span class="comment">//重写方法</span></span><br><span class="line">        &#123;</span><br><span class="line">            Console.WriteLine(<span class="string">&quot;MyDerivedClass.MyMethod&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">private</span> <span class="built_in">int</span> myProperty;</span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">override</span> <span class="built_in">int</span> 属性         <span class="comment">//重写属性</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">get</span> &#123; <span class="keyword">return</span> myProperty; &#125;</span><br><span class="line">            <span class="keyword">set</span> &#123; myProperty = <span class="keyword">value</span>; &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">class</span> 主程序</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">//主程序</span></span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>()</span></span><br><span class="line">        &#123;</span><br><span class="line">            游戏类 实例化=<span class="keyword">new</span> 游戏类();</span><br><span class="line">            实例化.方法();</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="interface-接口"><a href="#interface-接口" class="headerlink" title="interface 接口"></a>interface 接口</h2><ul>
+<li>interface 是一种特殊的类型，用于定义一个或多个方法、属性、索引器和事件，但是接口不能包含具体的实现。接口可以被其他类实现，以实现接口定义的方法和属性。一个类可以实现一个或多个接口，从而实现多态性和代码重用。</li>
+</ul>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"><span class="keyword">namespace</span> 命名空间</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">interface</span> <span class="title">IMyInterface</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">void</span> 方法();</span><br><span class="line"></span><br><span class="line">        <span class="built_in">int</span> 属性 &#123; <span class="keyword">get</span>; <span class="keyword">set</span>; &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">class</span> 游戏类 : <span class="title">IMyInterface</span>    <span class="comment">//继承</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">void</span> 方法()</span><br><span class="line">        &#123;</span><br><span class="line">            Console.WriteLine(<span class="string">&quot;MyClass.MyMethod&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">private</span> <span class="built_in">int</span> myProperty;</span><br><span class="line">        <span class="keyword">public</span> <span class="built_in">int</span> 属性</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">get</span> &#123; <span class="keyword">return</span> myProperty; &#125;</span><br><span class="line">            <span class="keyword">set</span> &#123; myProperty = <span class="keyword">value</span>; &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">class</span> 主程序</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">//主程序</span></span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>()</span></span><br><span class="line">        &#123;</span><br><span class="line">            游戏类 实例化=<span class="keyword">new</span> 游戏类();</span><br><span class="line">            实例化.方法();</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="sealed-密封"><a href="#sealed-密封" class="headerlink" title="sealed 密封"></a>sealed 密封</h2><ul>
+<li>sealed 是一个修饰符，用于标识一个类或一个成员是密封的，即不能被其他类继承或重写</li>
+</ul>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">sealed</span> <span class="keyword">class</span> <span class="title">MySealedClass</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">MyMethod</span>()</span></span><br><span class="line">    &#123;</span><br><span class="line">        Console.WriteLine(<span class="string">&quot;MySealedClass.MyMethod&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="base-基类"><a href="#base-基类" class="headerlink" title="base 基类"></a>base 基类</h2><ul>
+<li>base 关键字，用于访问基类的成员或调用基类的构造函数。</li>
+</ul>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">MyBaseClass</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">virtual</span> <span class="keyword">void</span> <span class="title">MyMethod</span>()</span></span><br><span class="line">    &#123;</span><br><span class="line">        Console.WriteLine(<span class="string">&quot;MyBaseClass.MyMethod&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">MyDerivedClass</span> : <span class="title">MyBaseClass</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">override</span> <span class="keyword">void</span> <span class="title">MyMethod</span>()</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">base</span>.MyMethod();  <span class="comment">// Call the base class method</span></span><br><span class="line">        Console.WriteLine(<span class="string">&quot;MyDerivedClass.MyMethod&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="this-引用"><a href="#this-引用" class="headerlink" title="this 引用"></a>this 引用</h2><ul>
+<li>this 关键字，用于引用当前对象，即包含当前代码的对象实例。</li>
+</ul>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">MyClass</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="built_in">int</span> myField;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">SetMyField</span>(<span class="params"><span class="built_in">int</span> <span class="keyword">value</span></span>)</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">this</span>.myField = <span class="keyword">value</span>;  <span class="comment">// 使用“this”来引用当前对象</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="循坏关键字"><a href="#循坏关键字" class="headerlink" title="循坏关键字"></a>循坏关键字</h2><ul>
+<li>break：程序只会跳出内层的循环，并不会影响到外层循环的执行。</li>
+</ul>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="built_in">int</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; i++)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">if</span> (i == <span class="number">5</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">break</span>;  <span class="comment">// 当 i == 5 时跳过循环体的其余部分</span></span><br><span class="line">    &#125;</span><br><span class="line">    Console.WriteLine(i);</span><br><span class="line">&#125;</span><br><span class="line">Console.WriteLine(<span class="string">&quot;循环结束&quot;</span>);</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>continue：会跳过当前循环中continue后面的代码，强迫开始下一次循环。</li>
+</ul>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="built_in">int</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; i++)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">if</span> (i == <span class="number">5</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">continue</span>;  <span class="comment">// 当 i == 5 时跳过循环体的其余部分</span></span><br><span class="line">    &#125;</span><br><span class="line">    Console.WriteLine(i);</span><br><span class="line">&#125;</span><br><span class="line">Console.WriteLine(<span class="string">&quot;循环结束&quot;</span>);</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>foreach：用于循环访问数组、集合或其他实现了 IEnumerable 接口的对象。使用 foreach 循环语句可以简化遍历数组或集合的代码，并提高程序的可读性和可维护性。</li>
+</ul>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">int</span>[] nums = &#123; <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span> &#125;;</span><br><span class="line"><span class="keyword">foreach</span> (<span class="built_in">int</span> num <span class="keyword">in</span> nums)</span><br><span class="line">&#123;</span><br><span class="line">    Console.WriteLine(num);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="参数关键字"><a href="#参数关键字" class="headerlink" title="参数关键字"></a>参数关键字</h2><ul>
+<li>ref 当修改形参的值时，实参的值也会被修改。</li>
+</ul>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">int</span> num = <span class="number">5</span>;</span><br><span class="line">ModifyNumber(<span class="keyword">ref</span> num);</span><br><span class="line">Console.WriteLine(num);</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">ModifyNumber</span>(<span class="params"><span class="keyword">ref</span> <span class="built_in">int</span> number</span>)</span></span><br><span class="line">&#123;</span><br><span class="line">    number = <span class="number">10</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>out 用于传递参数的引用。和 ref 关键字类似，使用 out 关键字可以使方法能够修改传递给它的变量的值，但 out 关键字还有一个特点，要求在方法内必须将 out 参数赋值。</li>
+</ul>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">int</span> num1, num2;</span><br><span class="line">AddNumbers(<span class="number">5</span>, <span class="number">10</span>, <span class="keyword">out</span> num1, <span class="keyword">out</span> num2);</span><br><span class="line">Console.WriteLine(num1);</span><br><span class="line">Console.WriteLine(num2);</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">AddNumbers</span>(<span class="params"><span class="built_in">int</span> a, <span class="built_in">int</span> b, <span class="keyword">out</span> <span class="built_in">int</span> sum, <span class="keyword">out</span> <span class="built_in">int</span> product</span>)</span></span><br><span class="line">&#123;</span><br><span class="line">    sum = a + b;</span><br><span class="line">    product = a * b;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="委托事件"><a href="#委托事件" class="headerlink" title="委托事件"></a>委托事件</h2><ol>
+<li>声明委托</li>
+</ol>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="built_in">delegate</span> <span class="keyword">void</span> 委托();</span><br></pre></td></tr></table></figure>
+
+<p>2.声明事件和发生事件</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Game</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    public event 委托 信号;  <span class="comment">//声明事件</span></span><br><span class="line">    public <span class="type">void</span> 触发信号()   </span><br><span class="line">    &#123;</span><br><span class="line">        信号.Invoke();       <span class="comment">//发送信号</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>3.接收信号</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Game game=<span class="keyword">new</span> Game();</span><br><span class="line">game.信号+=on_接收函数;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">void</span> on_接收函数()</span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="接口"><a href="#接口" class="headerlink" title="接口"></a>接口</h2><ol>
+<li>声明接口</li>
+</ol>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">interface</span> 接口</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">void</span> 函数<span class="number">1</span>();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>实现接口</li>
+</ol>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">Game</span>,接口  <span class="comment">//继承接口(链接结构)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> 函数<span class="number">1</span>()  <span class="comment">//实现接口</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">//其他代码</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="with"><a href="#with" class="headerlink" title="with"></a>with</h2><p>Position &#x3D; Position with { Y &#x3D; 0 };</p>
+<h2 id="迭代器"><a href="#迭代器" class="headerlink" title="迭代器"></a>迭代器</h2><ul>
+<li><p>yield return  返回下一个元素</p>
+</li>
+<li><p>yield break 终止迭代</p>
+</li>
+</ul>
+<h2 id="抛出异常"><a href="#抛出异常" class="headerlink" title="抛出异常"></a>抛出异常</h2><figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span>  </span><br><span class="line">&#123;  </span><br><span class="line">    <span class="comment">// 这里放置可能会抛出异常的代码  </span></span><br><span class="line">    <span class="comment">// 例如，尝试访问一个不存在的节点  </span></span><br><span class="line">    Node playerNode = GetNode&lt;Node&gt;(<span class="string">&quot;../Player&quot;</span>);  </span><br><span class="line">    <span class="comment">// 如果GetNode方法内部抛出了异常（比如因为找不到节点），那么异常将被下面的catch块捕获  </span></span><br><span class="line">&#125;  </span><br><span class="line"><span class="keyword">catch</span> (Exception ex)  </span><br><span class="line">&#123;  </span><br><span class="line">    <span class="comment">// 打印异常信息和堆栈跟踪  </span></span><br><span class="line">    Console.WriteLine(<span class="string">&quot;发生了一个异常: &quot;</span> + ex.Message);  </span><br><span class="line">    Console.WriteLine(<span class="string">&quot;堆栈跟踪: &quot;</span> + ex.StackTrace);  </span><br><span class="line"></span><br><span class="line">    <span class="comment">// 如果你使用的是Godot引擎，并且想要在Godot的输出面板中显示这些信息，  </span></span><br><span class="line">    <span class="comment">// 你可能想要使用GD.PushError或者GD.PushWarning  </span></span><br><span class="line">    <span class="comment">// 注意：GD.PushError和GD.PushWarning是GDScript的方法，在C#中你需要使用GD.PrintErr或类似的方法（如果存在的话）  </span></span><br><span class="line">    <span class="comment">// GD.PrintErr(&quot;发生了一个异常: &quot; + ex.Message);  </span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 或者，如果你正在使用某种日志系统，你可以将错误信息记录到日志中  </span></span><br><span class="line">    <span class="comment">// MyLogger.LogError(&quot;发生了一个异常: &quot; + ex.Message);  </span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="进程"><a href="#进程" class="headerlink" title="进程"></a>进程</h1><p>进程（Process）是操作系统中的一个核心概念，它表示一个正在运行的程序实例。进程是系统进行资源分配和调度的基本单位，每个进程都拥有独立的内存空间和系统资源。以下是进程与线程、协程的主要区别：</p>
+<ol>
+<li><p><strong>资源占用</strong>：</p>
+<ul>
+<li>进程：每个进程都有独立的内存空间和系统资源，包括代码、数据、打开的文件描述符、信号处理器、栈和堆等。进程之间的切换涉及资源的重新分配和回收，因此开销相对较大。</li>
+<li>线程：线程是进程内的一条执行路径，多个线程共享进程的资源（如内存空间和文件描述符），因此线程切换的开销较小。</li>
+<li>协程：协程同样在进程内部运行，但它们并不由操作系统直接调度，而是由用户代码或协程库来控制。协程的切换开销非常小，因为它们不涉及系统资源的重新分配。</li>
+</ul>
+</li>
+<li><p><strong>独立性</strong>：</p>
+<ul>
+<li>进程：进程具有独立性，一个进程的崩溃不会影响其他进程的执行。每个进程都有独立的地址空间，因此进程间的数据通信需要通过进程间通信（IPC）机制来实现。</li>
+<li>线程：线程间共享进程的资源，因此一个线程的崩溃可能导致整个进程的崩溃。线程间的数据通信相对简单，因为它们可以直接访问共享的内存空间。</li>
+<li>协程：协程在进程内部运行，它们之间可以共享进程的资源。协程间的数据通信通常通过用户代码或协程库来实现，例如通过消息传递或共享数据结构。</li>
+</ul>
+</li>
+<li><p><strong>并发性</strong>：</p>
+<ul>
+<li>进程：由于进程切换的开销较大，因此并发运行的进程数量通常较少。操作系统通过调度算法来分配CPU时间片给各个进程，以实现并发执行。</li>
+<li>线程：线程切换的开销较小，因此可以并发运行更多的线程。线程是轻量级的并发单位，适合处理高并发的场景。</li>
+<li>协程：协程的切换开销非常小，因此可以并发运行大量的协程。协程的并发性由用户代码或协程库来控制，可以实现更细粒度的并发控制。</li>
+</ul>
+</li>
+<li><p><strong>安全性</strong>：</p>
+<ul>
+<li>进程：由于进程具有独立的内存空间和系统资源，因此进程间的数据隔离性较好，安全性较高。</li>
+<li>线程：线程间共享进程的资源，因此需要注意线程安全问题，如数据竞争、死锁等。</li>
+<li>协程：协程在进程内部运行，同样需要注意线程安全问题。但由于协程的切换由用户代码或协程库来控制，因此可以更容易地实现线程安全的并发编程。</li>
+</ul>
+</li>
+<li><p><strong>应用场景</strong>：</p>
+<ul>
+<li>进程：适用于需要独立运行、互不干扰的程序实例。例如，操作系统中的每个用户程序通常都以进程的形式运行。</li>
+<li>线程：适用于需要并发执行多个任务、共享资源的场景。例如，多线程服务器可以同时处理多个客户端的请求。</li>
+<li>协程：适用于需要高并发、低延迟的场景，如Web服务器、游戏服务器等。协程可以充分利用CPU资源，提高程序的响应性和吞吐量。</li>
+</ul>
+</li>
+</ol>
+<h1 id="概念和特性"><a href="#概念和特性" class="headerlink" title="概念和特性"></a>概念和特性</h1><p>编程中除了之前提到的多态性之外，还有许多重要的概念和特性。以下是一些常见的编程概念和特性，并参考了提供的文章中的相关信息：</p>
+<ol>
+<li><p><strong>数据结构</strong>：</p>
+<ul>
+<li>数据结构是组织和存储数据的方式，以便有效地访问和修改这些数据。</li>
+<li>常见的数据结构包括数组、链表、栈、队列、树（如二叉树、红黑树）、图等。</li>
+<li>每种数据结构都有其特定的性质和应用场景，如数组的插入快、存取快但查找和删除慢，链表的插入和删除快但查找慢等。</li>
+</ul>
+</li>
+<li><p><strong>算法</strong>：</p>
+<ul>
+<li>算法是解决特定问题的一系列步骤或规则。</li>
+<li>算法的基本特性包括输入、输出、有穷性、确定性和可行性。</li>
+<li>输入是算法开始前需要的数据，输出是算法执行后产生的结果。</li>
+<li>有穷性表示算法在执行有限的步骤后会终止。</li>
+<li>确定性意味着算法的每一步都是明确规定的，没有歧义。</li>
+<li>可行性则要求算法的每一步都是可行的，即每一步都能在有限时间内完成。</li>
+</ul>
+</li>
+<li><p><strong>封装</strong>：</p>
+<ul>
+<li>封装是面向对象编程的三大基本特性之一。</li>
+<li>它通过隐藏对象的属性和方法的具体实现细节，仅对外提供公共的访问方式，来保护对象的内部状态和数据不被随意修改，提高代码的安全性和可维护性。</li>
+</ul>
+</li>
+<li><p><strong>继承</strong>：</p>
+<ul>
+<li>继承是面向对象编程中代码重用的主要手段之一。</li>
+<li>它允许我们定义一个通用的类（父类或基类），然后创建它的子类来继承其属性和方法。子类可以添加新的属性或方法，或者重写父类的方法来实现多态性。</li>
+</ul>
+</li>
+<li><p><strong>接口</strong>：</p>
+<ul>
+<li>接口是面向对象编程中定义行为规范的一种机制。</li>
+<li>它定义了一组方法的签名，但不包含方法的实现。任何类只要实现了接口中定义的方法，就可以被视为该接口的实现类。</li>
+<li>接口可以提高代码的灵活性和可扩展性，使得不同的类可以遵循相同的规范进行通信。</li>
+</ul>
+</li>
+<li><p><strong>抽象类</strong>：</p>
+<ul>
+<li>抽象类是一种特殊的类，它不能被实例化，但可以定义抽象方法和非抽象方法。</li>
+<li>抽象方法只有方法的签名，没有具体的实现。子类必须实现抽象类中的所有抽象方法才能被实例化。</li>
+<li>抽象类通常用于定义一组具有共同特性的对象的公共属性和方法。</li>
+</ul>
+</li>
+<li><p><strong>多态性</strong>（已详细讨论）：</p>
+<ul>
+<li>多态性是面向对象编程的重要特性之一。它允许我们使用父类类型的变量来引用子类对象，并调用子类对象的方法。这样可以在运行时动态地确定要调用的方法，提高了代码的灵活性和可扩展性。</li>
+</ul>
+</li>
+<li><p><strong>异常处理</strong>：</p>
+<ul>
+<li>异常处理是编程中用于处理运行时错误的一种机制。</li>
+<li>当程序遇到无法处理的错误时，会抛出一个异常。程序可以使用try-catch块来捕获并处理这些异常，以防止程序崩溃或产生不可预期的结果。</li>
+</ul>
+</li>
+<li><p><strong>泛型</strong>：</p>
+<ul>
+<li>泛型是编程语言提供的一种支持参数化类型的机制。</li>
+<li>通过使用泛型，我们可以编写更加灵活和可重用的代码，减少类型转换的错误和不必要的代码冗余。</li>
+</ul>
+</li>
+</ol>
+<p>这些概念和特性在编程中起着至关重要的作用，它们共同构成了编程语言的基础和框架，使得我们能够更加高效、安全地编写出高质量的代码。</p>
+<p>在编程中，除了之前提到的概念和特性外，还有以下一些重要的概念和特性，它们对于编写高效、健壮和可维护的代码至关重要：</p>
+<ol>
+<li><p><strong>数据类型</strong>：</p>
+<ul>
+<li>数据类型是编程中的一个基本概念，它定义了变量或数据元素可以持有的值的种类。</li>
+<li>常见的数据类型包括整数（int）、浮点数（float）、字符串（string）、布尔值（boolean）等。</li>
+<li>了解不同数据类型的特性以及如何在程序中使用它们，是编写正确程序的重要前提。</li>
+</ul>
+</li>
+<li><p><strong>源文件（Source File）</strong>：</p>
+<ul>
+<li>在开发软件的过程中，源文件是用于保存编写好的代码的文件。</li>
+<li>源文件使得代码不会丢失，能够被编译器找到，并最终转化为可执行文件。</li>
+<li>每种编程语言的源文件都有特定的后缀，如C语言的源文件后缀是.c，C++语言的是.cpp，Python的是.py等。</li>
+</ul>
+</li>
+<li><p><strong>简洁性和明确性</strong>：</p>
+<ul>
+<li>编程语言的语法应简洁而明确，以降低学习难度，提高代码的可读性。</li>
+<li>简洁性意味着语法规则不应过于复杂，避免不必要的冗余。</li>
+<li>明确性则要求语法规则清晰，减少歧义，使代码更易于理解和维护。</li>
+</ul>
+</li>
+<li><p><strong>强类型系统</strong>：</p>
+<ul>
+<li>强类型系统能够在编译时检测出许多类型错误，防止运行时错误，提高代码的健壮性。</li>
+<li>它还能提供更好的代码补全和重构工具，提高开发效率。</li>
+</ul>
+</li>
+<li><p><strong>安全性</strong>：</p>
+<ul>
+<li>现代编程语言应内置对安全的支持，例如对内存安全的保护、对并发和异步操作的安全控制等。</li>
+<li>这有助于减少程序员的错误，防止安全漏洞。</li>
+</ul>
+</li>
+<li><p><strong>跨平台兼容性</strong>：</p>
+<ul>
+<li>跨平台兼容性指的是编程语言编写的程序能够在不同的操作系统或硬件平台上运行而无需大量修改。</li>
+<li>这通常通过编译器或解释器来实现，使得程序能够覆盖更广泛的用户基础。</li>
+</ul>
+</li>
+<li><p><strong>垃圾回收机制</strong>：</p>
+<ul>
+<li>自动垃圾回收是管理内存的重要机制，可以防止内存泄漏和无效引用。</li>
+<li>它能够降低程序员的负担，提高程序的稳定性。</li>
+</ul>
+</li>
+<li><p><strong>易读性和易写性</strong>：</p>
+<ul>
+<li>易读性指的是代码的清晰度和直观性，编程语言应该设计得易于人们阅读和理解。</li>
+<li>易写性则包括语言的易学性和易维护性，编程语言应当容易上手，并提供丰富的库和框架来支持快速开发。</li>
+</ul>
+</li>
+<li><p><strong>抽象性</strong>：</p>
+<ul>
+<li>抽象性是编程语言的重要特性之一，它允许开发者创建与硬件之间的抽象层，从而提高代码的通用性和灵活性。</li>
+<li>抽象性还表现在数据类型、控制结构等方面的抽象，有助于程序员更加简明地表达计算过程，降低编程的难度。</li>
+</ul>
+</li>
+<li><p><strong>可移植性</strong>：</p>
+<ul>
+<li>可移植性是指编程语言编写的程序能够在不同的环境和平台间进行迁移的能力。</li>
+<li>高可移植性的编程语言能够减少为适配不同系统环境所付出的工作量，从而提高开发效率。</li>
+</ul>
+</li>
+<li><p><strong>高效性</strong>：</p>
+<ul>
+<li>高效性涉及编程语言的执行速度和资源消耗。</li>
+<li>优秀的编程语言应生成高效的代码，充分利用计算资源，实现快速执行和高效内存使用。</li>
+</ul>
+</li>
+</ol>
+<p>以上概念和特性是编程中非常重要的组成部分，它们共同构成了编程语言的基础和框架，为开发者提供了强大的工具来构建高质量的软件系统。</p>
+<h1 id="游戏开发语言熟练度"><a href="#游戏开发语言熟练度" class="headerlink" title="游戏开发语言熟练度"></a>游戏开发语言熟练度</h1><p>游戏开发程序员需要具备的编程能力和技能包括熟练掌握至少一种游戏编程语言、理解游戏引擎原理和工作机制、精通数据结构与算法、拥有良好的数学和物理基础、以及持续的学习和适应新技术的能力。在这些基础上，<strong>精通数据结构与算法</strong>是不可或缺的，因为游戏开发中常常涉及复杂的问题解决，效率优化，以及多变的功能实现，而这一切的基础都是坚实的算法和数据结构知识。</p>
+<p>一、编程语言掌握</p>
+<p>游戏开发程序员首先需要熟练掌握至少一种常用的游戏编程语言。C++因其高性能和大型游戏项目中频繁使用而成为游戏行业的主流语言。C#也因为其与Unity游戏引擎的紧密结合而受到广泛欢迎。Python、Java和JavaScript等其他语言也在某些游戏开发环境中有其应用。</p>
+<ul>
+<li>熟练使用C++：C++以其接近硬件的操作能力和高性能，在游戏开发中尤其是AAA游戏制作中占有重要位置。</li>
+<li>掌握C#和Unity：Unity是目前非常流行的游戏开发平台，而C#是Unity的主要脚本语言，因此熟练C#对Unity游戏开发者至关重要。</li>
+</ul>
+<p>二、游戏引擎使用</p>
+<p>游戏引擎是游戏开发的核心，程序员必须理解其原理并能熟练使用至少一种游戏引擎。不同的游戏引擎有其特色和适应的游戏类型，如Unreal Engine擅长制作视觉冲击力强的3D游戏，而Unity则在2D和3D游戏开发上都有很好的表现。</p>
+<ul>
+<li>深入理解引擎架构：了解游戏引擎的底层逻辑、渲染流程和物理仿真等，可以帮助开发者更高效地使用引擎。</li>
+<li>熟悉引擎提供的工具及API：熟练掌握游戏引擎提供的各种工具和API能大幅提升开发效率和游戏质量。</li>
+</ul>
+<p>三、数学和物理基础</p>
+<p>游戏开发不仅需要良好的编程技术，还需要扎实的数学和物理知识，尤其是线性代数、几何和动力学等。3D图形编程需要使用矩阵变换、向量运算、光线追踪等数学工具，而物理引擎的开发和调试则需要运动学和力学的知识。</p>
+<ul>
+<li>掌握线性代数和几何学：这些数学知识是3D游戏图形编程的基础，负责描述和变换游戏世界中的对象。</li>
+<li>理解动力学原理：游戏中的物体运动，碰撞处理等需要使用到牛顿运动定律等力学原理。</li>
+</ul>
+<p>四、数据结构与算法</p>
+<p>游戏开发程序员必须熟练应用数据结构和算法。游戏内部复杂数据的存取、游戏场景的快速检索、<a target="_blank" rel="noopener" href="https://docs.pingcode.com/blog/59162.html">AI</a>的路径查找等都需要高效的数据结构和算法支持。</p>
+<ul>
+<li>掌握常用数据结构：比如数组、链表、堆、哈希表、图和树等，这些都是处理游戏数据的基本工具。</li>
+<li>精通算法设计：这包括但不限于排序、搜索、路径查找（如A*算法）、动态规划等，在游戏开发中有着广泛应用。</li>
+</ul>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>Author: </span><span class="post-copyright-info"><a href="https://luojiangbao015.github.io">John Doe</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>Link: </span><span class="post-copyright-info"><a href="https://luojiangbao015.github.io/2025/03/14/cs/%E5%85%B3%E9%94%AE%E5%AD%97/">https://luojiangbao015.github.io/2025/03/14/cs/%E5%85%B3%E9%94%AE%E5%AD%97/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>Copyright Notice: </span><span class="post-copyright-info">All articles on this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless otherwise stated.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/auraea/tags/%E5%AD%A6%E4%B9%A0/">学习</a></div><div class="post-share"><div class="social-share" data-image="/auraea/img/butterfly-icon.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/auraea/2025/03/14/cpp/%E5%85%B3%E9%94%AE%E5%AD%97/" title="CPP关键字"><img class="cover" src="https://img2.imgtp.com/2024/03/29/Iy4Ct6xe.png" onerror="onerror=null;src='/auraea/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">Previous</div><div class="info-item-2">CPP关键字</div></div><div class="info-2"><div class="info-item-1">关键 🔵未了解  🔴了解        数据类型 控制 存储 类 转换 异常    int  整型🔴 if  如果🔴 auto 字典推导🔴 class类🔴 const_cas类型转换🔵 catch异常处理🔵   long  长整型🔴 else  否则🔴 static  静态🔴 template模🔴板 dynamic_cast 类型转换操作符🔵 throw抛出异常🔵   float 浮点🔴 switch判断🔴 extern其他文件定义🔵 friend友元🔴 reinterpret_cast类型转换🔵 try异常   double  双精度🔴 case  或者🔴 mutable在常量函数修改属性🔴 union 联合体🔴 static_cast型转换操作符之🔵    char  字符🔴 default switch的否则🔴 sizeof  长度🔴 **struct **结构体🔴     wchar_t宽字符类型 for  循坏🔴 this  特殊指针🔴 new指向🔴     public公开🔴 break...</div></div></div></a><a class="pagination-related" href="/auraea/2025/03/14/python/cpp%E6%A8%A1%E6%9D%BF/" title="游戏设计模式"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-right"><div class="info-1"><div class="info-item-1">Next</div><div class="info-item-2">游戏设计模式</div></div><div class="info-2"><div class="info-item-1">游戏设计模式命令模式 对输入指令和动画进行解耦撤销等  享元模式 多个对象共用同一个资源  更新方法模式 对每个对象单独调用更新函数  游戏循环模式 游戏循环底层  双缓冲模式 绘制相关  状态模式 状态机逻辑,有限状态机等  单例模式 静态函数,全局变量  原型模式 关于工厂模式,预制体,泛型,模板  观察者模式 通过观察者模式接受命令执行相应的动作  字节码模式 自定义编程语言?  子类沙箱模式 将多复用的方法写在基类,避免高耦合度  类型对象 将对象可通过外部文件修改,避免修改源码  组件模式 对对象添加组件进行使用  事件队列 将事件加入队列,等待执行处理,类似观察者模式,多出缓存区域  服务器定位器 类似单例   </div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>Related Articles</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/auraea/2025/03/14/cpp/C++%E6%95%B0%E7%BB%84/" title="c++数组"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2025-03-14</div><div class="info-item-2">c++数组</div></div><div class="info-2"><div class="info-item-1">文档说明 此文档记录了C++普通数组实现增删改查的方法  声明123int const 数组最大长度=10;      //声明数组最大长度int 数组数据=[N+1];       //声明数组,长度为11       同:int 数组数据[11];int 元素数量=0;           //声明一个整形遍历,用来记录存储数组元素数量   插入数组的方法 创建一个带有一个参数的方法 判断数组数组元素数量是否等于最大数组元素,如果等于则返回跳出 如果元素数量小于最大元素数量,数组&#x3D;等于参数,元素数量+1,  123456789void 插入元素(int 元素)&#123;    if (元素数量==数组最大长度)    &#123;        cout&lt;&lt;&quot;数组满了&quot;&lt;&lt;endl;        return;  //跳出函数    &#125;    数组数据[元素数量=元素数量+1]=元素;  //数组数据[1]=元素&#125;    通过以上方法可以通过for直接插入数组  1234for(int...</div></div></div></a><a class="pagination-related" href="/auraea/2025/03/14/cpp/CMake/" title="Cmake"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2025-03-14</div><div class="info-item-2">Cmake</div></div><div class="info-2"><div class="info-item-1">文档说明 用于记录CMake编译器的用法  CMake用法基础 模板  123cmake_minimum_required(VERSION 3.10)  #版本project(MyProject)  #项目名   可执行文件  1add_executable(可执行文件名 main.cpp)    多个可执行文件  12add_executable(可执行文件名1 my1.cpp) add_executable(可执行文件名2 my2.cpp)   生成静态文件 生成静态库  12set(MUL_SOURCES ./mul/mul.cpp)          #设置CPP路径变量add_library(mul STATIC $&#123;MUL_SOURCES&#125;)  #通过MUL_SOURCES路径STATIC属性添加为静态库   链接全局,将静态链接链接至所有程序  123include_directories(./)  #添加头文件路径1.link_directories(路径)  #添加静态库链接所在目录2.link_libraries(库名)     ...</div></div></div></a><a class="pagination-related" href="/auraea/2025/03/14/cpp/cpp%E5%9F%BA%E7%A1%80/" title="CPP基础"><img class="cover" src="https://img2.imgtp.com/2024/03/29/Iy4Ct6xe.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2025-03-14</div><div class="info-item-2">CPP基础</div></div><div class="info-2"><div class="info-item-1">文档说明 记录CPP的一些基础用法  基础变量变量声明1234int 整型=0;int[] 数组=&#123;2,2,2&#125;;char 字符=&#x27;a&#x27;;String 字符串=&quot;我是字符串&quot;;  结构体结构体声明123456struct 结构体&#123;string 字符串;int x;int y;&#125;  类类声明123456789class Box&#123;  public:  // 公有成员   protected:  // 受保护成员   private:  // 私有成员&#125;;  函数回调函数 通过指针函数对函数进行调用  12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777879808182838485868788899091#include...</div></div></div></a><a class="pagination-related" href="/auraea/2025/03/14/cpp/cpp%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" title="cpp数据结构"><img class="cover" src="https://img2.imgtp.com/2024/03/29/CuFHenMA.webp" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2025-03-14</div><div class="info-item-2">cpp数据结构</div></div><div class="info-2"><div class="info-item-1">结构线性表   方法     初始化init()    头插insertAtHead(int vale)    尾插insertAtTail(int vale)    删除指定元素deletenode(int vale)    遍历输出printList()    析构LinkedList()    线性表数组1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980818283848586878889909192#include&lt;bits/stdc++.h&gt;using namespace std;const int N = 10;    //最大容量为10int res[N + 1];    //存储元素,下标从1开始int cnt = 0;    //数组指针，也表示当前元素数量//插入元素void...</div></div></div></a><a class="pagination-related" href="/auraea/2025/03/14/cpp/cpp%E6%A8%A1%E6%9D%BF/" title="cpp模板"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2025-03-14</div><div class="info-item-2">cpp模板</div></div><div class="info-2"><div class="info-item-1">Git 拉取 1git clone 链接  修改  添加 1git add .  检查 1git status  提交 1git commit -m &quot;input yours message&quot;  推送 1git push origin main  </div></div></div></a><a class="pagination-related" href="/auraea/2025/03/14/cpp/inGUI/" title="ImGUI"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2025-03-14</div><div class="info-item-2">ImGUI</div></div><div class="info-2"><div class="info-item-1">文档说明 ImGui库是一个强大的C++GUI开源库,可用于开发多种可视化程序  窗口创建窗口 源码声明  1bool ImGui::Begin(const char* name, bool* p_open, ImGuiWindowFlags flags)  //创建窗口  1void ImGui::End()  //结束   name 窗口名 p_open 布尔指针,控制窗口显示 ImGuiWindowFlags...</div></div></div></a></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/auraea/img/butterfly-icon.png" onerror="this.onerror=null;this.src='/auraea/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">John Doe</div><div class="author-info-description"></div><div class="site-data"><a href="/auraea/archives/"><div class="headline">Articles</div><div class="length-num">36</div></a><a href="/auraea/tags/"><div class="headline">Tags</div><div class="length-num">3</div></a><a href="/auraea/categories/"><div class="headline">Categories</div><div class="length-num">6</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Contents</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%96%87%E6%A1%A3%E8%AF%B4%E6%98%8E"><span class="toc-number">1.</span> <span class="toc-text">文档说明</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#C-%E5%B8%B8%E7%94%A8%E5%85%B3%E9%94%AE%E5%AD%97"><span class="toc-number">2.</span> <span class="toc-text">C#常用关键字</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B3%E9%94%AE%E5%AD%97%E9%9B%86%E5%90%88"><span class="toc-number">2.0.1.</span> <span class="toc-text">关键字集合</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-number">2.1.</span> <span class="toc-text">数据类型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#new-%E5%AE%9E%E4%BE%8B%E5%8C%96"><span class="toc-number">2.2.</span> <span class="toc-text">new 实例化</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#class-%E7%B1%BB"><span class="toc-number">2.3.</span> <span class="toc-text">class 类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#public-%E5%85%AC%E5%BC%80"><span class="toc-number">2.4.</span> <span class="toc-text">public  公开</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#private-%E7%A7%81%E6%9C%89"><span class="toc-number">2.5.</span> <span class="toc-text">private 私有</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#protected-%E5%8F%97%E4%BF%9D%E6%8A%A4"><span class="toc-number">2.6.</span> <span class="toc-text">protected 受保护</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#static-%E9%9D%99%E6%80%81"><span class="toc-number">2.7.</span> <span class="toc-text">static 静态</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#internal-%E7%A8%8B%E5%BA%8F%E9%9B%86"><span class="toc-number">2.8.</span> <span class="toc-text">internal 程序集</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#readonly-%E5%8F%AA%E8%AF%BB"><span class="toc-number">2.9.</span> <span class="toc-text">readonly 只读</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#virtual-%E9%87%8D%E5%86%99"><span class="toc-number">2.10.</span> <span class="toc-text">virtual 重写</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#override-%E9%87%8D%E5%86%99"><span class="toc-number">2.11.</span> <span class="toc-text">override 重写</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#abstract-%E6%8A%BD%E8%B1%A1"><span class="toc-number">2.12.</span> <span class="toc-text">abstract 抽象</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#interface-%E6%8E%A5%E5%8F%A3"><span class="toc-number">2.13.</span> <span class="toc-text">interface 接口</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#sealed-%E5%AF%86%E5%B0%81"><span class="toc-number">2.14.</span> <span class="toc-text">sealed 密封</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#base-%E5%9F%BA%E7%B1%BB"><span class="toc-number">2.15.</span> <span class="toc-text">base 基类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#this-%E5%BC%95%E7%94%A8"><span class="toc-number">2.16.</span> <span class="toc-text">this 引用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BE%AA%E5%9D%8F%E5%85%B3%E9%94%AE%E5%AD%97"><span class="toc-number">2.17.</span> <span class="toc-text">循坏关键字</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%82%E6%95%B0%E5%85%B3%E9%94%AE%E5%AD%97"><span class="toc-number">2.18.</span> <span class="toc-text">参数关键字</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A7%94%E6%89%98%E4%BA%8B%E4%BB%B6"><span class="toc-number">2.19.</span> <span class="toc-text">委托事件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8E%A5%E5%8F%A3"><span class="toc-number">2.20.</span> <span class="toc-text">接口</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#with"><span class="toc-number">2.21.</span> <span class="toc-text">with</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%AD%E4%BB%A3%E5%99%A8"><span class="toc-number">2.22.</span> <span class="toc-text">迭代器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8A%9B%E5%87%BA%E5%BC%82%E5%B8%B8"><span class="toc-number">2.23.</span> <span class="toc-text">抛出异常</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%BF%9B%E7%A8%8B"><span class="toc-number">3.</span> <span class="toc-text">进程</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%A6%82%E5%BF%B5%E5%92%8C%E7%89%B9%E6%80%A7"><span class="toc-number">4.</span> <span class="toc-text">概念和特性</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91%E8%AF%AD%E8%A8%80%E7%86%9F%E7%BB%83%E5%BA%A6"><span class="toc-number">5.</span> <span class="toc-text">游戏开发语言熟练度</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Posts</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/auraea/2025/03/14/%E6%B8%B8%E6%88%8F%E8%AE%BE%E8%AE%A1/%E6%B8%B8%E6%88%8F%E8%AE%BE%E8%AE%A1/" title="游戏设计"><img src="/auraea/img/ww/D003.png" onerror="this.onerror=null;this.src='/auraea/img/404.jpg'" alt="游戏设计"/></a><div class="content"><a class="title" href="/auraea/2025/03/14/%E6%B8%B8%E6%88%8F%E8%AE%BE%E8%AE%A1/%E6%B8%B8%E6%88%8F%E8%AE%BE%E8%AE%A1/" title="游戏设计">游戏设计</a><time datetime="2025-03-14T11:39:30.302Z" title="Created 2025-03-14 19:39:30">2025-03-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/auraea/2025/03/14/%E6%9D%82%E9%A1%B9/%E6%B8%B8%E6%88%8F%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90/" title="游戏源码解析"><img src="/auraea/img/ww/D003.png" onerror="this.onerror=null;this.src='/auraea/img/404.jpg'" alt="游戏源码解析"/></a><div class="content"><a class="title" href="/auraea/2025/03/14/%E6%9D%82%E9%A1%B9/%E6%B8%B8%E6%88%8F%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90/" title="游戏源码解析">游戏源码解析</a><time datetime="2025-03-14T11:39:30.299Z" title="Created 2025-03-14 19:39:30">2025-03-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/auraea/2025/03/14/%E6%9D%82%E9%A1%B9/%E5%B0%8F%E8%AF%B4/" title="怪物猎人伤害"><img src="/auraea/img/ww/D003.png" onerror="this.onerror=null;this.src='/auraea/img/404.jpg'" alt="怪物猎人伤害"/></a><div class="content"><a class="title" href="/auraea/2025/03/14/%E6%9D%82%E9%A1%B9/%E5%B0%8F%E8%AF%B4/" title="怪物猎人伤害">怪物猎人伤害</a><time datetime="2025-03-14T11:39:30.298Z" title="Created 2025-03-14 19:39:30">2025-03-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/auraea/2025/03/14/%E6%9D%82%E9%A1%B9/%E5%B0%8F%E8%AF%B4%20-%20%E5%89%AF%E6%9C%AC/" title="怪物猎人伤害"><img src="/auraea/img/ww/D003.png" onerror="this.onerror=null;this.src='/auraea/img/404.jpg'" alt="怪物猎人伤害"/></a><div class="content"><a class="title" href="/auraea/2025/03/14/%E6%9D%82%E9%A1%B9/%E5%B0%8F%E8%AF%B4%20-%20%E5%89%AF%E6%9C%AC/" title="怪物猎人伤害">怪物猎人伤害</a><time datetime="2025-03-14T11:39:30.296Z" title="Created 2025-03-14 19:39:30">2025-03-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/auraea/2025/03/14/%E6%9D%82%E9%A1%B9/%E4%BC%A4%E5%AE%B3%E8%AE%A1%E7%AE%97/" title="怪物猎人伤害"><img src="/auraea/img/ww/D003.png" onerror="this.onerror=null;this.src='/auraea/img/404.jpg'" alt="怪物猎人伤害"/></a><div class="content"><a class="title" href="/auraea/2025/03/14/%E6%9D%82%E9%A1%B9/%E4%BC%A4%E5%AE%B3%E8%AE%A1%E7%AE%97/" title="怪物猎人伤害">怪物猎人伤害</a><time datetime="2025-03-14T11:39:30.295Z" title="Created 2025-03-14 19:39:30">2025-03-14</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2025 By John Doe</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 7.3.0</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.3.5</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Reading Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Toggle Between Light and Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle Between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Settings"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table of Contents"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="Back to Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/auraea/js/utils.js"></script><script src="/auraea/js/main.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

@@ -1,0 +1,569 @@
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>游戏设计 | Hexo</title><meta name="author" content="John Doe"><meta name="copyright" content="John Doe"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="益智游戏 通过课本设置相应的教学游戏 数学:加减乘除算法,坐标等应用解题 语文:古诗词卷轴支线任务故事  修仙代号-斩妖伏魔录 剧情向游戏,怪猎模式.玩家角色将扮演一位小道长接取降妖任务下山斩妖,还有找东西等小任务.在一次次的降妖任务中,任务也会越来越难,找到霍乱大妖并降伏. 斩杀的妖物可以获得材料升级装备,应对接下来更强的妖物.妖物地图内,玩家可以采集药材和挖矿,可以用来制作装备和合成各种消耗品">
+<meta property="og:type" content="article">
+<meta property="og:title" content="游戏设计">
+<meta property="og:url" content="https://luojiangbao015.github.io/2025/03/14/%E6%B8%B8%E6%88%8F%E8%AE%BE%E8%AE%A1/%E6%B8%B8%E6%88%8F%E8%AE%BE%E8%AE%A1/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="益智游戏 通过课本设置相应的教学游戏 数学:加减乘除算法,坐标等应用解题 语文:古诗词卷轴支线任务故事  修仙代号-斩妖伏魔录 剧情向游戏,怪猎模式.玩家角色将扮演一位小道长接取降妖任务下山斩妖,还有找东西等小任务.在一次次的降妖任务中,任务也会越来越难,找到霍乱大妖并降伏. 斩杀的妖物可以获得材料升级装备,应对接下来更强的妖物.妖物地图内,玩家可以采集药材和挖矿,可以用来制作装备和合成各种消耗品">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://luojiangbao015.github.io/img/ww/D003.png">
+<meta property="article:published_time" content="2025-03-14T11:39:30.302Z">
+<meta property="article:modified_time" content="2025-02-07T15:33:59.571Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="学习">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://luojiangbao015.github.io/img/ww/D003.png"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "游戏设计",
+  "url": "https://luojiangbao015.github.io/2025/03/14/%E6%B8%B8%E6%88%8F%E8%AE%BE%E8%AE%A1/%E6%B8%B8%E6%88%8F%E8%AE%BE%E8%AE%A1/",
+  "image": "https://luojiangbao015.github.io/img/ww/D003.png",
+  "datePublished": "2025-03-14T11:39:30.302Z",
+  "dateModified": "2025-02-07T15:33:59.571Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "John Doe",
+      "url": "https://luojiangbao015.github.io/"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/auraea/img/favicon.png"><link rel="canonical" href="https://luojiangbao015.github.io/2025/03/14/%E6%B8%B8%E6%88%8F%E8%AE%BE%E8%AE%A1/%E6%B8%B8%E6%88%8F%E8%AE%BE%E8%AE%A1/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/auraea/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/auraea/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: 'Copy Successful',
+    error: 'Copy Failed',
+    noSupport: 'Browser Not Supported'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: 'Just now',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: 'Load More'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '游戏设计',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><meta name="generator" content="Hexo 7.3.0"></head><body><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(img/ww/D003.png);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/auraea/"><span class="site-name">Hexo</span></a><a class="nav-page-title" href="/auraea/"><span class="site-name">游戏设计</span></a></span><div id="menus"></div></nav><div id="post-info"><h1 class="post-title">游戏设计</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2025-03-14T11:39:30.302Z" title="Created 2025-03-14 19:39:30">2025-03-14</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2025-02-07T15:33:59.571Z" title="Updated 2025-02-07 23:33:59">2025-02-07</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/auraea/categories/cpp/">cpp</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post Views:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><h1 id="益智游戏"><a href="#益智游戏" class="headerlink" title="益智游戏"></a>益智游戏</h1><ul>
+<li>通过课本设置相应的教学游戏</li>
+<li>数学:加减乘除算法,坐标等应用解题</li>
+<li>语文:古诗词卷轴支线任务故事</li>
+</ul>
+<h1 id="修仙"><a href="#修仙" class="headerlink" title="修仙"></a>修仙</h1><h2 id="代号-斩妖伏魔录"><a href="#代号-斩妖伏魔录" class="headerlink" title="代号-斩妖伏魔录"></a>代号-斩妖伏魔录</h2><ul>
+<li>剧情向游戏,怪猎模式.玩家角色将扮演一位小道长接取降妖任务下山斩妖,还有找东西等小任务.在一次次的降妖任务中,任务也会越来越难,找到霍乱大妖并降伏.</li>
+<li>斩杀的妖物可以获得材料升级装备,应对接下来更强的妖物.妖物地图内,玩家可以采集药材和挖矿,可以用来制作装备和合成各种消耗品等.同样药材也可以在药田种植和采集</li>
+<li>炼器房:购买装备和合成装备</li>
+<li>丹阁:购买消耗品和炼丹</li>
+<li>阵房:购买阵法陷阱</li>
+</ul>
+<h1 id="游戏模块"><a href="#游戏模块" class="headerlink" title="游戏模块"></a>游戏模块</h1><h2 id="背包"><a href="#背包" class="headerlink" title="背包"></a>背包</h2><ul>
+<li>背包需要依赖物品类型,便于管理物品类型数组&#x2F;集合</li>
+<li>需要添加物品,修改物品(数量为0删除物品),查询物品(测试),整理物品(类型排序.ID排序,向前排序),交换物品</li>
+</ul>
+<h3 id="公开函数"><a href="#公开函数" class="headerlink" title="公开函数"></a>公开函数</h3><table>
+<thead>
+<tr>
+<th>方法</th>
+<th>用途</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>添加物品数量</td>
+<td>捡到物品,购买物品,删除物品</td>
+<td></td>
+</tr>
+<tr>
+<td>减少物品数量</td>
+<td>出售物品,丢弃物品</td>
+<td></td>
+</tr>
+<tr>
+<td>添加物品</td>
+<td>没有物品时</td>
+<td></td>
+</tr>
+<tr>
+<td>删除物品</td>
+<td>物品数量为0时</td>
+<td></td>
+</tr>
+<tr>
+<td>整理物品</td>
+<td>ID排序,类型排序,向前排序</td>
+<td></td>
+</tr>
+<tr>
+<td>交换物品</td>
+<td>鼠标拖拽,聚焦交换</td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id="物品类"><a href="#物品类" class="headerlink" title="物品类"></a>物品类</h2><ul>
+<li>装备,消耗品,材料,任务材料</li>
+<li>可拾取,背包物品,装备物品,效果物品</li>
+</ul>
+<h3 id="基础属性"><a href="#基础属性" class="headerlink" title="基础属性"></a>基础属性</h3><table>
+<thead>
+<tr>
+<th>属性</th>
+<th>描述</th>
+<th>用途</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>ID</td>
+<td>物品ID(int)</td>
+<td>唯一ID,创建物品和判断类别</td>
+</tr>
+<tr>
+<td>Name</td>
+<td>名字(FName)</td>
+<td></td>
+</tr>
+<tr>
+<td>Icon</td>
+<td>物品图标(Texture2D)</td>
+<td>显示</td>
+</tr>
+<tr>
+<td>Pile</td>
+<td>堆叠(bool)</td>
+<td>是否可堆叠</td>
+</tr>
+<tr>
+<td>quantity</td>
+<td>物品数量(int)</td>
+<td></td>
+</tr>
+<tr>
+<td>MaxQuantity</td>
+<td>最大数量(int)</td>
+<td></td>
+</tr>
+<tr>
+<td>Description</td>
+<td>物品描述(FText)</td>
+<td></td>
+</tr>
+<tr>
+<td>Rarity</td>
+<td>稀有度( enum 或 int32)</td>
+<td></td>
+</tr>
+<tr>
+<td>Type</td>
+<td>物品类别</td>
+<td>例如武器、防具、消耗品等</td>
+</tr>
+<tr>
+<td>Effect</td>
+<td>物品效果</td>
+<td></td>
+</tr>
+<tr>
+<td>Price</td>
+<td>物品价格(int)</td>
+<td></td>
+</tr>
+<tr>
+<td>Weight</td>
+<td>物品重量</td>
+<td></td>
+</tr>
+</tbody></table>
+<p>扩展功能<br>UseItem：使用物品的方法，类型为 void UseItem()。<br>Switchback：判断两个物品是否可以堆叠的方法，类型为 bool Switchback(Overoptimistic* Other Item)。<br>GetRarityText：获取物品稀有度文本的方法，类型为 FString GetRarityText()。<br>Rigoletto：获取物品提示信息的方法，类型为 F String Rigoletto()。<br>你可以根据游戏的具体需求来决定是否添加这些属性和功能。</p>
+<h3 id="装备属性"><a href="#装备属性" class="headerlink" title="装备属性"></a>装备属性</h3><ul>
+<li>生成Actor装备到角色身上</li>
+<li>获取途径:捡到获取,怪物掉落.任务奖励,打造合成</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>基础攻击力(物理&#x2F;魔法)</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>属性攻击力</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>毒攻击力</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>防御力</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>眩晕</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>切断</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>破碎</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>暴击率</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>命中率</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>回避率</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>攻击速度</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>释放速度</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>移动速度</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>附加伤害</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>增加伤害</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>暴击伤害</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>属性伤害</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>技能攻击力</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>特殊技能1</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>特殊技能2</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>特殊技能3</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>套装效果</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>力量</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>智力</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>体力</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>精神</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>耐力</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>回避距离</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>回避</td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id="消耗品属性"><a href="#消耗品属性" class="headerlink" title="消耗品属性"></a>消耗品属性</h3><ul>
+<li>对角色自身应用效果,也可以给队友用</li>
+<li>获取途径:捡到获取,采集获取,任务奖励,合成</li>
+<li>通过Actor触发,通过使用触发</li>
+<li>类别:丹药,药膏,饮料</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>回复生命值(固定&#x2F;百分比)</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>回复魔法值(固定&#x2F;百分比)</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>回复耐力(固定&#x2F;百分比)</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>增加攻击力</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>增加防御力</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>增加伤害</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>增加暴击</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>增加攻击速度</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>增加移动速度</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>增加释放速度</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>增加跳跃高度</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>回复饱食度</td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id="材料"><a href="#材料" class="headerlink" title="材料"></a>材料</h3><ul>
+<li>合成装备,合成消耗品,提交任务</li>
+<li>获取途径:捡到获取,采集获取,怪物掉落.任务奖励,养殖培育,合成</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>ID</td>
+<td>通过ID与合成数据表合成</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id="物品类-1"><a href="#物品类-1" class="headerlink" title="物品类"></a>物品类</h2><ul>
+<li>物品基类</li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Fill out your copyright notice in the Description page of Project Settings.</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">pragma</span> once</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;CoreMinimal.h&quot;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;K2Node_GetDataTableRow.h&quot;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;FairyItemBase.generated.h&quot;</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">pragma</span> region 结构体</span></span><br><span class="line"><span class="comment">//物品基础属性结构体</span></span><br><span class="line"><span class="built_in">USTRUCT</span>(BlueprintType)</span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">FFairyItemStruct</span> : <span class="keyword">public</span> FTableRowBase</span><br><span class="line">&#123;</span><br><span class="line">	<span class="built_in">GENERATED_BODY</span>()</span><br><span class="line"></span><br><span class="line">	<span class="comment">// 物品唯一ID</span></span><br><span class="line">	<span class="built_in">UPROPERTY</span>(EditAnywhere, BlueprintReadWrite)</span><br><span class="line">	int32 ID;</span><br><span class="line"></span><br><span class="line">	<span class="comment">// 物品名称</span></span><br><span class="line">	<span class="built_in">UPROPERTY</span>(EditAnywhere, BlueprintReadWrite)</span><br><span class="line">	FName Name;</span><br><span class="line"></span><br><span class="line">	<span class="comment">// 物品类型</span></span><br><span class="line">	<span class="built_in">UPROPERTY</span>(EditAnywhere, BlueprintReadWrite)</span><br><span class="line">	FText Type;</span><br><span class="line"></span><br><span class="line">	<span class="comment">// 物品图标</span></span><br><span class="line">	<span class="comment">// 物品图标</span></span><br><span class="line">	<span class="built_in">UPROPERTY</span>(EditAnywhere, BlueprintReadWrite)</span><br><span class="line">	TObjectPtr&lt;UTexture2D&gt; Icon;</span><br><span class="line">	</span><br><span class="line">	<span class="comment">//堆叠</span></span><br><span class="line">	<span class="built_in">UPROPERTY</span>(EditAnywhere, BlueprintReadWrite)</span><br><span class="line">	<span class="type">bool</span> Pile;</span><br><span class="line"></span><br><span class="line">	<span class="comment">// 物品数量</span></span><br><span class="line">	<span class="built_in">UPROPERTY</span>(EditAnywhere, BlueprintReadWrite)</span><br><span class="line">	int32 Quantity;</span><br><span class="line"></span><br><span class="line">	<span class="comment">// 物品最大数量</span></span><br><span class="line">	<span class="built_in">UPROPERTY</span>(EditAnywhere, BlueprintReadWrite)</span><br><span class="line">	int32 MaxQuantity;</span><br><span class="line"></span><br><span class="line">	<span class="comment">//物品稀有度</span></span><br><span class="line">	<span class="built_in">UPROPERTY</span>(EditAnywhere, BlueprintReadWrite)</span><br><span class="line">	int32 Rarity;</span><br><span class="line"></span><br><span class="line">	<span class="comment">// 物品等级</span></span><br><span class="line">	<span class="built_in">UPROPERTY</span>(EditAnywhere, BlueprintReadWrite)</span><br><span class="line">	int32 Level;</span><br><span class="line"></span><br><span class="line">	<span class="comment">// 物品价格</span></span><br><span class="line">	<span class="built_in">UPROPERTY</span>(EditAnywhere, BlueprintReadWrite)</span><br><span class="line">	int32 Price;</span><br><span class="line"></span><br><span class="line">	<span class="comment">// 物品描述</span></span><br><span class="line">	<span class="built_in">UPROPERTY</span>(EditAnywhere, BlueprintReadWrite)</span><br><span class="line">	FText Description;</span><br><span class="line">	</span><br><span class="line">	<span class="comment">// 物品属性</span></span><br><span class="line">	<span class="built_in">UPROPERTY</span>(EditAnywhere, BlueprintReadWrite)</span><br><span class="line">	FText Attribute;</span><br><span class="line"></span><br><span class="line">	<span class="comment">//物品重量</span></span><br><span class="line">	<span class="built_in">UPROPERTY</span>(EditAnywhere, BlueprintReadWrite)</span><br><span class="line">	<span class="type">float</span> Weight;</span><br><span class="line"></span><br><span class="line">	<span class="comment">//是否堆叠</span></span><br><span class="line">	<span class="built_in">UPROPERTY</span>(EditAnywhere, BlueprintReadWrite)</span><br><span class="line">	<span class="type">bool</span> bIsStack;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="meta">#<span class="keyword">pragma</span> endregion</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">pragma</span> region 类</span></span><br><span class="line"><span class="built_in">UCLASS</span>(blueprintable, BlueprintType)</span><br><span class="line"><span class="keyword">class</span> <span class="title class_">TESTGUI_API</span> UFairyItemBase : <span class="keyword">public</span> UObject</span><br><span class="line">&#123;</span><br><span class="line">	<span class="built_in">GENERATED_BODY</span>()</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	<span class="comment">// 获取物品ID</span></span><br><span class="line">	<span class="built_in">UFUNCTION</span>(BlueprintPure, Category = ItemStruct)</span><br><span class="line">	<span class="function">int32 <span class="title">getItemID</span><span class="params">()</span> <span class="type">const</span></span>;</span><br><span class="line"></span><br><span class="line">	<span class="comment">// 获取物品名称</span></span><br><span class="line">	<span class="built_in">UFUNCTION</span>(BlueprintPure, Category = ItemStruct)</span><br><span class="line">	<span class="function">FName <span class="title">getName</span><span class="params">()</span> <span class="type">const</span></span>;</span><br><span class="line"></span><br><span class="line">	<span class="comment">// 获取物品类型</span></span><br><span class="line">	<span class="built_in">UFUNCTION</span>(BlueprintPure, Category = ItemStruct)</span><br><span class="line">	<span class="function">FText <span class="title">getType</span><span class="params">()</span> <span class="type">const</span></span>;</span><br><span class="line"></span><br><span class="line">	<span class="comment">//是否堆叠</span></span><br><span class="line">	<span class="built_in">UFUNCTION</span>(BlueprintPure, Category = ItemStruct)</span><br><span class="line">	<span class="function"><span class="type">bool</span> <span class="title">getPile</span><span class="params">()</span> <span class="type">const</span></span>;</span><br><span class="line"></span><br><span class="line">	<span class="comment">// 获取物品最大数量</span></span><br><span class="line">	<span class="built_in">UFUNCTION</span>(BlueprintPure, Category = ItemStruct)</span><br><span class="line">	<span class="function">int32 <span class="title">getMaxQuantity</span><span class="params">()</span> <span class="type">const</span></span>;</span><br><span class="line"></span><br><span class="line">	<span class="comment">// 获取物品稀有度</span></span><br><span class="line">	<span class="built_in">UFUNCTION</span>(BlueprintPure, Category = ItemStruct)</span><br><span class="line">	<span class="function">int32 <span class="title">getRarity</span><span class="params">()</span> <span class="type">const</span></span>;</span><br><span class="line"></span><br><span class="line">	<span class="comment">// 获取物品等级</span></span><br><span class="line">	<span class="built_in">UFUNCTION</span>(BlueprintPure, Category = ItemStruct)</span><br><span class="line">	<span class="function">int32 <span class="title">getLevel</span><span class="params">()</span> <span class="type">const</span></span>;</span><br><span class="line"></span><br><span class="line">	<span class="comment">// 获取物品价格</span></span><br><span class="line">	<span class="built_in">UFUNCTION</span>(BlueprintPure, Category = ItemStruct)</span><br><span class="line">	<span class="function">int32 <span class="title">getPrice</span><span class="params">()</span> <span class="type">const</span></span>;</span><br><span class="line"></span><br><span class="line">	<span class="comment">// 获取物品描述</span></span><br><span class="line">	<span class="built_in">UFUNCTION</span>(BlueprintPure, Category = ItemStruct)</span><br><span class="line">	<span class="function">FText <span class="title">getDescription</span><span class="params">()</span> <span class="type">const</span></span>;</span><br><span class="line"></span><br><span class="line">	<span class="comment">// 获取物品属性</span></span><br><span class="line">	<span class="built_in">UFUNCTION</span>(BlueprintPure, Category = ItemStruct)</span><br><span class="line">	<span class="function">FText <span class="title">getAttribute</span><span class="params">()</span> <span class="type">const</span></span>;</span><br><span class="line"></span><br><span class="line">	<span class="comment">// 获取物品重量</span></span><br><span class="line">	<span class="built_in">UFUNCTION</span>(BlueprintPure, Category = ItemStruct)</span><br><span class="line">	<span class="function"><span class="type">float</span> <span class="title">getWeight</span><span class="params">()</span> <span class="type">const</span></span>;</span><br><span class="line">	</span><br><span class="line"></span><br><span class="line">	<span class="comment">// 获取物品图标</span></span><br><span class="line">	<span class="built_in">UFUNCTION</span>(BlueprintPure, Category = ItemStruct)</span><br><span class="line">	<span class="function">UObject* <span class="title">getIcon</span><span class="params">()</span> <span class="type">const</span></span>;</span><br><span class="line">	</span><br><span class="line">	<span class="built_in">UFUNCTION</span>(BlueprintCallable, Category = ItemStruct)</span><br><span class="line">	<span class="function">int32 <span class="title">getQuantity</span><span class="params">()</span> <span class="type">const</span></span>;</span><br><span class="line">	</span><br><span class="line">	<span class="built_in">UFUNCTION</span>(BlueprintCallable)</span><br><span class="line">	<span class="function"><span class="type">void</span> <span class="title">setQuantity</span><span class="params">(int32 _Quantity)</span></span>;</span><br><span class="line">	</span><br><span class="line"></span><br><span class="line">	<span class="comment">//通过ID创建物品类型的实例</span></span><br><span class="line">	 <span class="built_in">UFUNCTION</span>(BlueprintCallable)</span><br><span class="line">	 <span class="function"><span class="type">static</span> UFairyItemBase* <span class="title">CreateFairyItemByID</span><span class="params">(UDataTable* DataTable, int32 ItemID)</span></span>;</span><br><span class="line">	</span><br><span class="line"></span><br><span class="line">	</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">	<span class="comment">// 物品唯一ID</span></span><br><span class="line">	int32 ItemID;</span><br><span class="line"></span><br><span class="line">	<span class="comment">// 物品名称</span></span><br><span class="line">	FName Name;</span><br><span class="line"></span><br><span class="line">	<span class="comment">// 物品类型</span></span><br><span class="line">	FText Type;</span><br><span class="line"></span><br><span class="line">	<span class="comment">// 物品图标</span></span><br><span class="line">	TObjectPtr&lt;UTexture2D&gt; Icon;</span><br><span class="line">	</span><br><span class="line">	<span class="comment">//堆叠</span></span><br><span class="line">	<span class="type">bool</span> Pile;</span><br><span class="line"></span><br><span class="line">	<span class="comment">// 物品数量</span></span><br><span class="line">	int32 Quantity;</span><br><span class="line"></span><br><span class="line">	<span class="comment">// 物品最大数量</span></span><br><span class="line">	int32 MaxQuantity;</span><br><span class="line"></span><br><span class="line">	<span class="comment">//物品稀有度</span></span><br><span class="line">	int32 Rarity;</span><br><span class="line"></span><br><span class="line">	<span class="comment">// 物品等级</span></span><br><span class="line">	int32 Level;</span><br><span class="line"></span><br><span class="line">	<span class="comment">// 物品价格</span></span><br><span class="line">	int32 Price;</span><br><span class="line"></span><br><span class="line">	<span class="comment">// 物品描述</span></span><br><span class="line">	FText Description;</span><br><span class="line">	</span><br><span class="line">	<span class="comment">// 物品属性</span></span><br><span class="line">	FText Attribute;</span><br><span class="line"></span><br><span class="line">	<span class="comment">//物品重量</span></span><br><span class="line">	<span class="type">float</span> Weight;</span><br><span class="line">	</span><br><span class="line">	</span><br><span class="line">	<span class="function"><span class="keyword">virtual</span> <span class="type">void</span> <span class="title">InitItem</span><span class="params">(<span class="type">const</span> FFairyItemStruct&amp; InFairyItemStruct)</span></span>;</span><br><span class="line">	</span><br><span class="line">&#125;;</span><br><span class="line"><span class="meta">#<span class="keyword">pragma</span> endregion</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Fill out your copyright notice in the Description page of Project Settings.</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;Components/FairyItemBase.h&quot;</span></span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function">int32 <span class="title">UFairyItemBase::getItemID</span><span class="params">()</span> <span class="type">const</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">return</span> ItemID;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function">FName <span class="title">UFairyItemBase::getName</span><span class="params">()</span> <span class="type">const</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">return</span> Name;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function">FText <span class="title">UFairyItemBase::getType</span><span class="params">()</span> <span class="type">const</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">return</span> Type;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">bool</span> <span class="title">UFairyItemBase::getPile</span><span class="params">()</span> <span class="type">const</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">return</span> Pile;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function">int32 <span class="title">UFairyItemBase::getMaxQuantity</span><span class="params">()</span> <span class="type">const</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">return</span> MaxQuantity;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function">int32 <span class="title">UFairyItemBase::getRarity</span><span class="params">()</span> <span class="type">const</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">return</span> Rarity;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function">int32 <span class="title">UFairyItemBase::getLevel</span><span class="params">()</span> <span class="type">const</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">return</span> Level;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function">int32 <span class="title">UFairyItemBase::getPrice</span><span class="params">()</span> <span class="type">const</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">return</span> Price;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function">FText <span class="title">UFairyItemBase::getDescription</span><span class="params">()</span> <span class="type">const</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">return</span> Description;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function">FText <span class="title">UFairyItemBase::getAttribute</span><span class="params">()</span> <span class="type">const</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">return</span> Attribute;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">float</span> <span class="title">UFairyItemBase::getWeight</span><span class="params">()</span> <span class="type">const</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">return</span> Weight;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function">UObject* <span class="title">UFairyItemBase::getIcon</span><span class="params">()</span> <span class="type">const</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">return</span> Icon;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function">int32 <span class="title">UFairyItemBase::getQuantity</span><span class="params">()</span> <span class="type">const</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">return</span> Quantity;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">UFairyItemBase::setQuantity</span><span class="params">(int32 _Quantity)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	Quantity = _Quantity;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">UFairyItemBase::InitItem</span><span class="params">(<span class="type">const</span> FFairyItemStruct&amp; InFairyItemStruct)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	ItemID= InFairyItemStruct.ID;</span><br><span class="line">	Name = InFairyItemStruct.Name;</span><br><span class="line">	Type = InFairyItemStruct.Type;</span><br><span class="line">	Pile = InFairyItemStruct.Pile;</span><br><span class="line">	MaxQuantity = InFairyItemStruct.MaxQuantity;</span><br><span class="line">	Rarity = InFairyItemStruct.Rarity;</span><br><span class="line">	Level = InFairyItemStruct.Level;</span><br><span class="line">	Price = InFairyItemStruct.Price;</span><br><span class="line">	Description = InFairyItemStruct.Description;</span><br><span class="line">	Attribute = InFairyItemStruct.Attribute;</span><br><span class="line">	Icon = InFairyItemStruct.Icon;</span><br><span class="line">	Weight = InFairyItemStruct.Weight;</span><br><span class="line">	Quantity = InFairyItemStruct.Quantity;</span><br><span class="line">	</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function">UFairyItemBase* <span class="title">UFairyItemBase::CreateFairyItemByID</span><span class="params">(UDataTable* DataTable, int32 ItemID)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (!DataTable)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="literal">nullptr</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">// 将 int32 转换为 FString</span></span><br><span class="line">	FString rowNameStr = FString::<span class="built_in">FromInt</span>(ItemID);</span><br><span class="line">	<span class="comment">// 将 FString 转换为 FName</span></span><br><span class="line">	FName rowName = *rowNameStr;</span><br><span class="line">	FFairyItemStruct* Row = DataTable-&gt;<span class="built_in">FindRow</span>&lt;FFairyItemStruct&gt;(rowName, <span class="built_in">TEXT</span>(<span class="string">&quot;&quot;</span>));</span><br><span class="line">	<span class="comment">//FFairyItemStruct* Row = FindDataStruct(DataTable, ItemID);</span></span><br><span class="line">	<span class="keyword">if</span> (Row)</span><br><span class="line">	&#123;</span><br><span class="line">		UFairyItemBase* NewItem = <span class="built_in">NewObject</span>&lt;UFairyItemBase&gt;();</span><br><span class="line">		NewItem-&gt;<span class="built_in">InitItem</span>(*Row);</span><br><span class="line">		<span class="keyword">return</span> NewItem;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="literal">nullptr</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="背包-1"><a href="#背包-1" class="headerlink" title="背包"></a>背包</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Fill out your copyright notice in the Description page of Project Settings.</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">pragma</span> once</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;CoreMinimal.h&quot;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;FairyItemBase.h&quot;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;Components/ActorComponent.h&quot;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;FairvKnapsackComponents.generated.h&quot;</span></span></span><br><span class="line"></span><br><span class="line"><span class="built_in">DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams</span> (FItemAddedSignature,TArray&lt;UFairyItemBase*&gt;, Item, int32, Quantity);</span><br><span class="line"><span class="keyword">class</span> <span class="title class_">UItemBoxWidgetBase</span>;</span><br><span class="line"></span><br><span class="line"><span class="built_in">USTRUCT</span>(BlueprintType)</span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">FItemStruct</span></span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="built_in">GENERATED_BODY</span>()</span><br><span class="line"></span><br><span class="line">	<span class="comment">//要生成的格子数量</span></span><br><span class="line">	<span class="built_in">UPROPERTY</span>(BlueprintReadWrite, EditAnywhere)</span><br><span class="line">	int32 Quantity;</span><br><span class="line"></span><br><span class="line">	<span class="built_in">UPROPERTY</span>(BlueprintReadWrite, EditAnywhere)</span><br><span class="line">	<span class="type">float</span>  ChildWidgetWidth;</span><br><span class="line"></span><br><span class="line">	<span class="built_in">UPROPERTY</span>(BlueprintReadWrite, EditAnywhere)</span><br><span class="line">	int32  line;</span><br><span class="line">	</span><br><span class="line">	<span class="built_in">UPROPERTY</span>(BlueprintReadWrite, EditAnywhere)</span><br><span class="line">	int32  Column;</span><br><span class="line"></span><br><span class="line">	</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="built_in">UCLASS</span>(Blueprintable,ClassGroup=(Custom), meta=(BlueprintSpawnableComponent))</span><br><span class="line"><span class="keyword">class</span> <span class="title class_">TESTGUI_API</span> UFairvKnapsackComponents : <span class="keyword">public</span> UActorComponent</span><br><span class="line">&#123;</span><br><span class="line">	<span class="built_in">GENERATED_BODY</span>()</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span>:	</span><br><span class="line">	<span class="comment">// Sets default values for this component&#x27;s properties</span></span><br><span class="line">	<span class="built_in">UFairvKnapsackComponents</span>();</span><br><span class="line"></span><br><span class="line">	<span class="comment">//添加物品</span></span><br><span class="line">	<span class="built_in">UFUNCTION</span>(BlueprintCallable)</span><br><span class="line">	<span class="function"><span class="type">void</span> <span class="title">AddItem</span><span class="params">(<span class="type">int</span> item_id)</span></span>;</span><br><span class="line"></span><br><span class="line">	<span class="comment">//delete物品</span></span><br><span class="line">	<span class="function"><span class="type">void</span> <span class="title">DeleteItem</span><span class="params">(<span class="type">const</span> UFairyItemBase*item)</span></span>;</span><br><span class="line"></span><br><span class="line">	<span class="comment">//获取物品</span></span><br><span class="line">	<span class="function">UFairyItemBase* <span class="title">GetItem</span><span class="params">(<span class="type">const</span> int32 item_id)</span></span>;</span><br><span class="line">	<span class="comment">//设置物品数量</span></span><br><span class="line">	<span class="function"><span class="type">void</span> <span class="title">SetItemQuantity</span><span class="params">(<span class="type">const</span> int32 item_id, int32 quantity)</span></span>;  </span><br><span class="line"></span><br><span class="line"><span class="keyword">protected</span>:</span><br><span class="line">	<span class="comment">// Called when the game starts</span></span><br><span class="line">	<span class="function"><span class="keyword">virtual</span> <span class="type">void</span> <span class="title">BeginPlay</span><span class="params">()</span> <span class="keyword">override</span></span>;</span><br><span class="line"></span><br><span class="line">	<span class="comment">//获取第一个为空的数组索引</span></span><br><span class="line">	<span class="function">int32 <span class="title">getHeadNull</span><span class="params">()</span></span>;</span><br><span class="line"></span><br><span class="line">	<span class="comment">//检查是否可堆叠</span></span><br><span class="line">	<span class="function"><span class="type">bool</span> <span class="title">IsStack</span><span class="params">(<span class="type">int</span> item_id)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span>:	</span><br><span class="line">	<span class="comment">// Called every frame</span></span><br><span class="line">	<span class="function"><span class="keyword">virtual</span> <span class="type">void</span> <span class="title">TickComponent</span><span class="params">(<span class="type">float</span> DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)</span> <span class="keyword">override</span></span>;</span><br><span class="line"></span><br><span class="line">	<span class="built_in">UPROPERTY</span>(EditAnywhere, BlueprintReadWrite)</span><br><span class="line">	TSubclassOf&lt;UItemBoxWidgetBase&gt; ItemBoxWidgetClass;</span><br><span class="line"></span><br><span class="line">	<span class="built_in">UPROPERTY</span>(EditAnywhere, BlueprintReadWrite)</span><br><span class="line">	TArray&lt;UFairyItemBase*&gt; FairyItemArray;</span><br><span class="line"></span><br><span class="line">	<span class="built_in">UPROPERTY</span>(EditAnywhere, BlueprintReadWrite)</span><br><span class="line">	int32 KnapsackSize;</span><br><span class="line"></span><br><span class="line">	<span class="comment">//物品数据表格</span></span><br><span class="line">	<span class="built_in">UPROPERTY</span>(EditAnywhere, BlueprintReadWrite)</span><br><span class="line">	UDataTable* DataTable;</span><br><span class="line"></span><br><span class="line">	<span class="comment">//当物品添加时触发</span></span><br><span class="line">	<span class="built_in">UPROPERTY</span>(BlueprintAssignable)</span><br><span class="line">	FItemAddedSignature ItemAddedSignature;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Fill out your copyright notice in the Description page of Project Settings.</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;Components/FairvKnapsackComponents.h&quot;</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Sets default values for this component&#x27;s properties</span></span><br><span class="line">UFairvKnapsackComponents::<span class="built_in">UFairvKnapsackComponents</span>()</span><br><span class="line">&#123;</span><br><span class="line">	<span class="comment">// Set this component to be initialized when the game starts, and to be ticked every frame.  You can turn these features</span></span><br><span class="line">	<span class="comment">// off to improve performance if you don&#x27;t need them.</span></span><br><span class="line">	KnapsackSize=<span class="number">0</span>;</span><br><span class="line">	PrimaryComponentTick.bCanEverTick = <span class="literal">true</span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	<span class="comment">// ...</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">UFairvKnapsackComponents::AddItem</span><span class="params">(<span class="type">int</span> item_id)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="comment">//检查背包是否有空位</span></span><br><span class="line">	int32 HeadNull=<span class="built_in">getHeadNull</span>();</span><br><span class="line">	<span class="keyword">if</span>(HeadNull==<span class="number">-1</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">UE_LOG</span>(LogTemp,Warning,<span class="built_in">TEXT</span>(<span class="string">&quot;背包已满&quot;</span>));</span><br><span class="line">		<span class="keyword">return</span>;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span>(!DataTable)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">UE_LOG</span>(LogTemp,Warning,<span class="built_in">TEXT</span>(<span class="string">&quot;DataTable为空&quot;</span>));</span><br><span class="line">		<span class="keyword">return</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="comment">//检查物品是否可堆叠</span></span><br><span class="line">	<span class="keyword">if</span>(<span class="built_in">IsStack</span>(item_id))</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">UE_LOG</span>(LogTemp,Warning,<span class="built_in">TEXT</span>(<span class="string">&quot;物品可堆叠&quot;</span>));</span><br><span class="line">		<span class="comment">//如果存在相同则添加数量</span></span><br><span class="line">		<span class="comment">//否则创建新物品添加到背包</span></span><br><span class="line">		<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;FairyItemArray.<span class="built_in">Num</span>();i++)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">if</span>(FairyItemArray[i]-&gt;<span class="built_in">getItemID</span>()==item_id)</span><br><span class="line">			&#123;</span><br><span class="line">				FairyItemArray[i]-&gt;<span class="built_in">setQuantity</span>(FairyItemArray[i]-&gt;<span class="built_in">getQuantity</span>()<span class="number">+1</span>);</span><br><span class="line">				<span class="keyword">return</span>;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		int32 index=<span class="built_in">getHeadNull</span>();</span><br><span class="line">		FairyItemArray[index]=UFairyItemBase::<span class="built_in">CreateFairyItemByID</span>(DataTable,item_id);</span><br><span class="line">		<span class="built_in">UE_LOG</span>(LogTemp,Warning,<span class="built_in">TEXT</span>(<span class="string">&quot;创建新物品&quot;</span>));</span><br><span class="line">		</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">	&#123;</span><br><span class="line">		<span class="comment">//创建物品添加到背包</span></span><br><span class="line">		<span class="built_in">UE_LOG</span>(LogTemp,Warning,<span class="built_in">TEXT</span>(<span class="string">&quot;物品不可堆叠&quot;</span>));</span><br><span class="line">		int32 index=<span class="built_in">getHeadNull</span>();</span><br><span class="line">		UFairyItemBase *item=UFairyItemBase::<span class="built_in">CreateFairyItemByID</span>(DataTable,item_id);</span><br><span class="line">		FairyItemArray[index]=item;</span><br><span class="line">		ItemAddedSignature.<span class="built_in">Broadcast</span>(FairyItemArray,<span class="number">1</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">UFairvKnapsackComponents::DeleteItem</span><span class="params">(<span class="type">const</span> UFairyItemBase*item)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(item==<span class="literal">nullptr</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">return</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">for</span> (int32 i = <span class="number">0</span>; i &lt; FairyItemArray.<span class="built_in">Num</span>(); ++i)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span> (FairyItemArray[i] == item)</span><br><span class="line">		&#123;</span><br><span class="line">			FairyItemArray[i] = <span class="literal">nullptr</span>;</span><br><span class="line">			<span class="keyword">return</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function">UFairyItemBase* <span class="title">UFairvKnapsackComponents::GetItem</span><span class="params">(<span class="type">const</span> int32 item_id)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;FairyItemArray.<span class="built_in">Num</span>();i++)</span><br><span class="line">		&#123;</span><br><span class="line">		<span class="keyword">if</span>(FairyItemArray[i]-&gt;<span class="built_in">getItemID</span>()==item_id)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="built_in">UE_LOG</span>(LogTemp,Warning,<span class="built_in">TEXT</span>(<span class="string">&quot;获取物品&quot;</span>));</span><br><span class="line">			UFairyItemBase *item=FairyItemArray[i];</span><br><span class="line">			<span class="keyword">return</span> item;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="literal">nullptr</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">UFairvKnapsackComponents::SetItemQuantity</span><span class="params">(<span class="type">const</span> int32 item_id, int32 quantity)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	UFairyItemBase *item=<span class="built_in">GetItem</span>(item_id);</span><br><span class="line">	<span class="keyword">if</span>(item==<span class="literal">nullptr</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">return</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	UE::Geometry::VectorUtil::<span class="built_in">Clamp</span>(quantity,<span class="number">0</span>,<span class="number">99</span>);</span><br><span class="line">	item-&gt;<span class="built_in">setQuantity</span>(item-&gt;<span class="built_in">getQuantity</span>()<span class="number">+1</span>);</span><br><span class="line">	<span class="keyword">if</span>(quantity==<span class="number">0</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">DeleteItem</span>(item);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// Called when the game starts</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">UFairvKnapsackComponents::BeginPlay</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	Super::<span class="built_in">BeginPlay</span>();</span><br><span class="line"></span><br><span class="line">	<span class="comment">//初始化背包大小</span></span><br><span class="line">	FairyItemArray.<span class="built_in">Reset</span>();</span><br><span class="line">	FairyItemArray.<span class="built_in">SetNum</span>(KnapsackSize);</span><br><span class="line">	</span><br><span class="line">	</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function">int32 <span class="title">UFairvKnapsackComponents::getHeadNull</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="type">int</span> p=FairyItemArray.<span class="built_in">Num</span>();</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;p;i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span>(FairyItemArray[i]==<span class="literal">nullptr</span>)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">return</span> i;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">bool</span> <span class="title">UFairvKnapsackComponents::IsStack</span><span class="params">(<span class="type">int</span> item_id)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">for</span> (FName rowName : DataTable-&gt;<span class="built_in">GetRowNames</span>())</span><br><span class="line">	&#123;</span><br><span class="line">		FString ContextString;</span><br><span class="line">		<span class="comment">//获取每一行数据</span></span><br><span class="line">		FFairyItemStruct* Row = DataTable-&gt;<span class="built_in">FindRow</span>&lt;FFairyItemStruct&gt;(rowName, ContextString);</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">if</span> (Row-&gt;ID == item_id)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">return</span> Row-&gt;bIsStack;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// Called every frame</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">UFairvKnapsackComponents::TickComponent</span><span class="params">(<span class="type">float</span> DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	Super::<span class="built_in">TickComponent</span>(DeltaTime, TickType, ThisTickFunction);</span><br><span class="line">	</span><br><span class="line">	<span class="comment">// ...</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h1 id="游戏系统"><a href="#游戏系统" class="headerlink" title="游戏系统"></a>游戏系统</h1><p>1）<strong>基础系统</strong>，支撑游戏基本运行功能，但不属于游戏可玩内容的系统模块。如账号登录系统、游戏设置系统等。</p>
+<p>（2）<strong>养成系统</strong>，游戏中包括角色养成、宠物养成、装备养成等养成内容的系统模块。</p>
+<p>（3）<strong>战斗系统</strong>，包含怪物系统、技能系统、枪械系统（射击游戏）等在内的与游戏方式相关的系统模块。</p>
+<p>（4）<strong>玩法系统</strong>，游戏中的玩法，如战场玩法、竞技场玩法、副本关卡、开放世界等。</p>
+<p>（5）<strong>经济系统</strong>，游戏中涵盖产出、积累、交易、消耗等环节的系统模块。</p>
+<p>（6）<strong>社交系统</strong>，游戏中人人交互、人机交互等内容的系统模块。</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>Author: </span><span class="post-copyright-info"><a href="https://luojiangbao015.github.io">John Doe</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>Link: </span><span class="post-copyright-info"><a href="https://luojiangbao015.github.io/2025/03/14/%E6%B8%B8%E6%88%8F%E8%AE%BE%E8%AE%A1/%E6%B8%B8%E6%88%8F%E8%AE%BE%E8%AE%A1/">https://luojiangbao015.github.io/2025/03/14/%E6%B8%B8%E6%88%8F%E8%AE%BE%E8%AE%A1/%E6%B8%B8%E6%88%8F%E8%AE%BE%E8%AE%A1/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>Copyright Notice: </span><span class="post-copyright-info">All articles on this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless otherwise stated.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/auraea/tags/%E5%AD%A6%E4%B9%A0/">学习</a></div><div class="post-share"><div class="social-share" data-image="/auraea/img/ww/D003.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related full-width" href="/auraea/2025/03/14/%E6%9D%82%E9%A1%B9/%E6%B8%B8%E6%88%8F%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90/" title="游戏源码解析"><img class="cover" src="/auraea/img/ww/D003.png" onerror="onerror=null;src='/auraea/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">Previous</div><div class="info-item-2">游戏源码解析</div></div><div class="info-2"><div class="info-item-1">枪火地牢SRC 脚本文件confilg Excel 配置文件,存放物体属性结构的类,带初始化和返回浅拷贝方法  framework 架构  activity   活动对象的类  common 随机数学算法等  coroutine 协程程序  debug 调试日子输出  map 地图相关  pool 对象池类  serialize 可序列化对象,颜色,Vector2,Vector3  ui 界面相关   </div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>Related Articles</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/auraea/2025/03/14/cpp/C++%E6%95%B0%E7%BB%84/" title="c++数组"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2025-03-14</div><div class="info-item-2">c++数组</div></div><div class="info-2"><div class="info-item-1">文档说明 此文档记录了C++普通数组实现增删改查的方法  声明123int const 数组最大长度=10;      //声明数组最大长度int 数组数据=[N+1];       //声明数组,长度为11       同:int 数组数据[11];int 元素数量=0;           //声明一个整形遍历,用来记录存储数组元素数量   插入数组的方法 创建一个带有一个参数的方法 判断数组数组元素数量是否等于最大数组元素,如果等于则返回跳出 如果元素数量小于最大元素数量,数组&#x3D;等于参数,元素数量+1,  123456789void 插入元素(int 元素)&#123;    if (元素数量==数组最大长度)    &#123;        cout&lt;&lt;&quot;数组满了&quot;&lt;&lt;endl;        return;  //跳出函数    &#125;    数组数据[元素数量=元素数量+1]=元素;  //数组数据[1]=元素&#125;    通过以上方法可以通过for直接插入数组  1234for(int...</div></div></div></a><a class="pagination-related" href="/auraea/2025/03/14/cpp/CMake/" title="Cmake"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2025-03-14</div><div class="info-item-2">Cmake</div></div><div class="info-2"><div class="info-item-1">文档说明 用于记录CMake编译器的用法  CMake用法基础 模板  123cmake_minimum_required(VERSION 3.10)  #版本project(MyProject)  #项目名   可执行文件  1add_executable(可执行文件名 main.cpp)    多个可执行文件  12add_executable(可执行文件名1 my1.cpp) add_executable(可执行文件名2 my2.cpp)   生成静态文件 生成静态库  12set(MUL_SOURCES ./mul/mul.cpp)          #设置CPP路径变量add_library(mul STATIC $&#123;MUL_SOURCES&#125;)  #通过MUL_SOURCES路径STATIC属性添加为静态库   链接全局,将静态链接链接至所有程序  123include_directories(./)  #添加头文件路径1.link_directories(路径)  #添加静态库链接所在目录2.link_libraries(库名)     ...</div></div></div></a><a class="pagination-related" href="/auraea/2025/03/14/cpp/cpp%E5%9F%BA%E7%A1%80/" title="CPP基础"><img class="cover" src="https://img2.imgtp.com/2024/03/29/Iy4Ct6xe.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2025-03-14</div><div class="info-item-2">CPP基础</div></div><div class="info-2"><div class="info-item-1">文档说明 记录CPP的一些基础用法  基础变量变量声明1234int 整型=0;int[] 数组=&#123;2,2,2&#125;;char 字符=&#x27;a&#x27;;String 字符串=&quot;我是字符串&quot;;  结构体结构体声明123456struct 结构体&#123;string 字符串;int x;int y;&#125;  类类声明123456789class Box&#123;  public:  // 公有成员   protected:  // 受保护成员   private:  // 私有成员&#125;;  函数回调函数 通过指针函数对函数进行调用  12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777879808182838485868788899091#include...</div></div></div></a><a class="pagination-related" href="/auraea/2025/03/14/cpp/cpp%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" title="cpp数据结构"><img class="cover" src="https://img2.imgtp.com/2024/03/29/CuFHenMA.webp" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2025-03-14</div><div class="info-item-2">cpp数据结构</div></div><div class="info-2"><div class="info-item-1">结构线性表   方法     初始化init()    头插insertAtHead(int vale)    尾插insertAtTail(int vale)    删除指定元素deletenode(int vale)    遍历输出printList()    析构LinkedList()    线性表数组1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980818283848586878889909192#include&lt;bits/stdc++.h&gt;using namespace std;const int N = 10;    //最大容量为10int res[N + 1];    //存储元素,下标从1开始int cnt = 0;    //数组指针，也表示当前元素数量//插入元素void...</div></div></div></a><a class="pagination-related" href="/auraea/2025/03/14/cpp/cpp%E6%A8%A1%E6%9D%BF/" title="cpp模板"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2025-03-14</div><div class="info-item-2">cpp模板</div></div><div class="info-2"><div class="info-item-1">Git 拉取 1git clone 链接  修改  添加 1git add .  检查 1git status  提交 1git commit -m &quot;input yours message&quot;  推送 1git push origin main  </div></div></div></a><a class="pagination-related" href="/auraea/2025/03/14/cpp/inGUI/" title="ImGUI"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2025-03-14</div><div class="info-item-2">ImGUI</div></div><div class="info-2"><div class="info-item-1">文档说明 ImGui库是一个强大的C++GUI开源库,可用于开发多种可视化程序  窗口创建窗口 源码声明  1bool ImGui::Begin(const char* name, bool* p_open, ImGuiWindowFlags flags)  //创建窗口  1void ImGui::End()  //结束   name 窗口名 p_open 布尔指针,控制窗口显示 ImGuiWindowFlags...</div></div></div></a></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/auraea/img/butterfly-icon.png" onerror="this.onerror=null;this.src='/auraea/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">John Doe</div><div class="author-info-description"></div><div class="site-data"><a href="/auraea/archives/"><div class="headline">Articles</div><div class="length-num">36</div></a><a href="/auraea/tags/"><div class="headline">Tags</div><div class="length-num">3</div></a><a href="/auraea/categories/"><div class="headline">Categories</div><div class="length-num">6</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Contents</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%9B%8A%E6%99%BA%E6%B8%B8%E6%88%8F"><span class="toc-number">1.</span> <span class="toc-text">益智游戏</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BF%AE%E4%BB%99"><span class="toc-number">2.</span> <span class="toc-text">修仙</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%A3%E5%8F%B7-%E6%96%A9%E5%A6%96%E4%BC%8F%E9%AD%94%E5%BD%95"><span class="toc-number">2.1.</span> <span class="toc-text">代号-斩妖伏魔录</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%B8%B8%E6%88%8F%E6%A8%A1%E5%9D%97"><span class="toc-number">3.</span> <span class="toc-text">游戏模块</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%83%8C%E5%8C%85"><span class="toc-number">3.1.</span> <span class="toc-text">背包</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%AC%E5%BC%80%E5%87%BD%E6%95%B0"><span class="toc-number">3.1.1.</span> <span class="toc-text">公开函数</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%89%A9%E5%93%81%E7%B1%BB"><span class="toc-number">3.2.</span> <span class="toc-text">物品类</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA%E7%A1%80%E5%B1%9E%E6%80%A7"><span class="toc-number">3.2.1.</span> <span class="toc-text">基础属性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A3%85%E5%A4%87%E5%B1%9E%E6%80%A7"><span class="toc-number">3.2.2.</span> <span class="toc-text">装备属性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B6%88%E8%80%97%E5%93%81%E5%B1%9E%E6%80%A7"><span class="toc-number">3.2.3.</span> <span class="toc-text">消耗品属性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9D%90%E6%96%99"><span class="toc-number">3.2.4.</span> <span class="toc-text">材料</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%89%A9%E5%93%81%E7%B1%BB-1"><span class="toc-number">3.3.</span> <span class="toc-text">物品类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%83%8C%E5%8C%85-1"><span class="toc-number">3.4.</span> <span class="toc-text">背包</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%B8%B8%E6%88%8F%E7%B3%BB%E7%BB%9F"><span class="toc-number">4.</span> <span class="toc-text">游戏系统</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Posts</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/auraea/2025/03/14/%E6%B8%B8%E6%88%8F%E8%AE%BE%E8%AE%A1/%E6%B8%B8%E6%88%8F%E8%AE%BE%E8%AE%A1/" title="游戏设计"><img src="/auraea/img/ww/D003.png" onerror="this.onerror=null;this.src='/auraea/img/404.jpg'" alt="游戏设计"/></a><div class="content"><a class="title" href="/auraea/2025/03/14/%E6%B8%B8%E6%88%8F%E8%AE%BE%E8%AE%A1/%E6%B8%B8%E6%88%8F%E8%AE%BE%E8%AE%A1/" title="游戏设计">游戏设计</a><time datetime="2025-03-14T11:39:30.302Z" title="Created 2025-03-14 19:39:30">2025-03-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/auraea/2025/03/14/%E6%9D%82%E9%A1%B9/%E6%B8%B8%E6%88%8F%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90/" title="游戏源码解析"><img src="/auraea/img/ww/D003.png" onerror="this.onerror=null;this.src='/auraea/img/404.jpg'" alt="游戏源码解析"/></a><div class="content"><a class="title" href="/auraea/2025/03/14/%E6%9D%82%E9%A1%B9/%E6%B8%B8%E6%88%8F%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90/" title="游戏源码解析">游戏源码解析</a><time datetime="2025-03-14T11:39:30.299Z" title="Created 2025-03-14 19:39:30">2025-03-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/auraea/2025/03/14/%E6%9D%82%E9%A1%B9/%E5%B0%8F%E8%AF%B4/" title="怪物猎人伤害"><img src="/auraea/img/ww/D003.png" onerror="this.onerror=null;this.src='/auraea/img/404.jpg'" alt="怪物猎人伤害"/></a><div class="content"><a class="title" href="/auraea/2025/03/14/%E6%9D%82%E9%A1%B9/%E5%B0%8F%E8%AF%B4/" title="怪物猎人伤害">怪物猎人伤害</a><time datetime="2025-03-14T11:39:30.298Z" title="Created 2025-03-14 19:39:30">2025-03-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/auraea/2025/03/14/%E6%9D%82%E9%A1%B9/%E5%B0%8F%E8%AF%B4%20-%20%E5%89%AF%E6%9C%AC/" title="怪物猎人伤害"><img src="/auraea/img/ww/D003.png" onerror="this.onerror=null;this.src='/auraea/img/404.jpg'" alt="怪物猎人伤害"/></a><div class="content"><a class="title" href="/auraea/2025/03/14/%E6%9D%82%E9%A1%B9/%E5%B0%8F%E8%AF%B4%20-%20%E5%89%AF%E6%9C%AC/" title="怪物猎人伤害">怪物猎人伤害</a><time datetime="2025-03-14T11:39:30.296Z" title="Created 2025-03-14 19:39:30">2025-03-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/auraea/2025/03/14/%E6%9D%82%E9%A1%B9/%E4%BC%A4%E5%AE%B3%E8%AE%A1%E7%AE%97/" title="怪物猎人伤害"><img src="/auraea/img/ww/D003.png" onerror="this.onerror=null;this.src='/auraea/img/404.jpg'" alt="怪物猎人伤害"/></a><div class="content"><a class="title" href="/auraea/2025/03/14/%E6%9D%82%E9%A1%B9/%E4%BC%A4%E5%AE%B3%E8%AE%A1%E7%AE%97/" title="怪物猎人伤害">怪物猎人伤害</a><time datetime="2025-03-14T11:39:30.295Z" title="Created 2025-03-14 19:39:30">2025-03-14</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2025 By John Doe</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 7.3.0</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.3.5</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Reading Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Toggle Between Light and Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle Between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Settings"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table of Contents"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="Back to Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/auraea/js/utils.js"></script><script src="/auraea/js/main.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
